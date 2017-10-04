@@ -2,6 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var webpack = require("webpack")
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
@@ -25,6 +26,7 @@ module.exports = {
             'components': path.resolve(__dirname, '../src/components'),
             'stylus': path.resolve(__dirname, '../src/common/stylus'),
             'js': path.resolve(__dirname, '../src/common/js'),
+            'assets': path.resolve(__dirname, '../src/assets'),
         }
     },
     module: {
@@ -70,7 +72,18 @@ module.exports = {
                     limit: 10000,
                     name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin('common.js'),
+        new webpack.ProvidePlugin({
+            jQuery: "jquery",
+            $: "jquery"
+        })
+    ]
 }
