@@ -283,7 +283,7 @@ body.is-loading #sidebar nav ul li {
 @media screen and (max-width: 1280px) {
 
   #contribute {
-    background-color: rgba(210, 58, 81, 0.9);
+    background-color: rgba(210, 58, 81, 1);
     color: #eee;
     width: 80px;
     height: 70px;
@@ -294,10 +294,10 @@ body.is-loading #sidebar nav ul li {
     text-align: center;
     line-height: 70px;
     transition: right 0.2s;
+    border-radius: 5px;
   }
 
   #contribute:hover {
-    
     right: 10px;
   }
 
@@ -306,20 +306,21 @@ body.is-loading #sidebar nav ul li {
 .center {
   height: 6vh;
   width: 80%;
-  display: block;
+  display: none;
   margin: 3vh auto 0vh auto;
   text-align: content;
   line-height: 6vh;
   font-size: 0.8em;
+
 }
 
 .profilepic {
   display: block;
-  border: 5px solid #fff;
+  border: 1px solid #fff;
   border-radius: 300px;
-  width: 14vh;
-  height: 14vh;
-  margin: 0 auto;
+  width: 3.3em;
+  height: 3.3em;
+  margin:  .1em ;
   position: relative;
   overflow: hidden;
   background: #88acdb;
@@ -329,8 +330,9 @@ body.is-loading #sidebar nav ul li {
   -webkit-box-pack: center;
   -webkit-box-align: center;
   text-align: center;
+  float: right;
+  right: 120px;
 }
-
 
 
 
@@ -354,8 +356,9 @@ body.is-loading #sidebar nav ul li {
     -webkit-align-items: stretch;
     -ms-align-items: stretch;
     align-items: stretch;
-    height: inherit;
     line-height: inherit;
+  min-height: 100%;
+  position: absolute;
   }
   #sidebar nav {
     height: inherit;
