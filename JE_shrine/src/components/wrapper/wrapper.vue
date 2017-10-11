@@ -1,9 +1,8 @@
 <template>
     
     <div id="wrapper">
-
         <!-- Intro -->
-        <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <section id="intro" class="wrapper style1 fullscreen fade-up section-list-hook">
             <!-- <div class="inner">
                 <h1>Hyperspace</h1>
                 <p>Just another fine responsive site template designed by
@@ -16,11 +15,10 @@
                 </ul>
             </div> -->
         </section>
-
         <!-- One -->
-        <section id="one" class="wrapper style2 spotlights">
+        <section id="one" class="wrapper style2 spotlights section-list-hook" >
             <section>
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+                <a href="#" class="image"><img src="" alt="" data-position="center center" /></a>
                 <div class="content">
                     <div class="inner">
                         <h2>Sed ipsum dolor</h2>
@@ -34,7 +32,7 @@
                 </div>
             </section>
             <section>
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+                <a href="#" class="image"><img src="" alt="" data-position="top center" /></a>
                 <div class="content">
                     <div class="inner">
                         <h2>Feugiat consequat</h2>
@@ -67,7 +65,7 @@
         </div> -->
 
         <!-- Two -->
-        <section id="two" class="wrapper style3 fade-up">
+        <section id="two" class="wrapper style3 fade-up section-list-hook">
             <div class="inner">
                 <h2>What we do</h2>
                 <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -112,7 +110,7 @@
         </section>
 
         <!-- Three -->
-        <section id="three" class="wrapper style1 fade-up">
+        <section id="three" class="wrapper style1 fade-up section-list-hook">
             <div class="inner">
                 <h2>Get in touch</h2>
                 <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -188,15 +186,43 @@
                 </div>
             </div>
         </section>
-
     </div>
-
-
 </template>
-<script>
-
+<script type="text/ecmascript-6">
+import BScroll from 'better-scroll'
 export default {
-  
+    data () {
+        return {
+            listHeight: [],
+            scrollY: 0
+        }
+    },
+    created () {
+    },
+     mounted () {
+         console.log('创建')
+        this._initScroll()
+        this._calculateHeight()
+        console.log(this.listHeight) 
+        console.log('结束')
+    },   
+    methods: {
+        _initScroll () {
+            const wrapperz = document.querySelector('#wrapper')
+            console.log(wrapperz)
+            this.wrapperScroll = new BScroll(wrapperz)
+        },
+        _calculateHeight () {
+            let sectionList = document.getElementsByClassName('section-list-hook')
+            let height = 0
+            this.listHeight.push(height)
+            for (let i = 0; i < sectionList.length; i++) {
+                let item = sectionList[i]
+                height += item.clientHeight
+                this.listHeight.push(height)
+            }
+        }
+    }
 }
 </script>
 <style lang="stylus">
@@ -221,7 +247,6 @@ export default {
 //         box-sizing border-box
 //     }
 // }
-
 // @media screen and (max-width: 736px) {
 
 //     #wrapper {

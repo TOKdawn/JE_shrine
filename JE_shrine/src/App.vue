@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    
    <sidebar></sidebar>
    <wrapper></wrapper>
   </div>
@@ -12,7 +11,7 @@ import sidebar from 'components/sidebar/sidebar.vue'// 侧边栏
 export default {
   components: {
     sidebar,
-    wrapper 
+    wrapper
   }
 }
 </script>

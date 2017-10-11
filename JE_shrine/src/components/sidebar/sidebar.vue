@@ -9,25 +9,29 @@
 
     <div class="inner">
       <nav>
+        
+      <scrollactive ref="scrollactive" class="my-nav">
+
         <ul>
           <li>
-            <a href="#intro">主页</a>
+            <a href="#intro" class="scrollactive-item">主页</a>
           </li>
           <li>
-            <a href="#one">分类</a>
+            <a href="#one" class="scrollactive-item">分类</a>
           </li>
           <li>
-            <a href="#two">小工具</a>
+            <a href="#two" class="scrollactive-item">小工具</a>
           </li>
           <li>
-            <a href="#three">关于我们</a>
+            <a href="#three" class="scrollactive-item">关于我们</a>
           </li>
           
           <li>
-            <a href="#three">鸣谢/捐赠</a>
+            <a href="#three" class="scrollactive-item">鸣谢/捐赠</a>
           </li>
 
-        </ul>
+        </ul>        
+        </scrollactive>
       </nav>
       
     </div>
@@ -40,6 +44,7 @@
 
 </template>
 <script>
+
 export default {
   data () {
     return {
@@ -50,7 +55,7 @@ export default {
 }
 </script>
 <style >
-
+,
 section{
   margin: 0;
   padding: 0;
