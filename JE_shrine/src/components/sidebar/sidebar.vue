@@ -10,7 +10,7 @@
     <div class="inner">
       <nav>
         
-      <scrollactive ref="scrollactive" class="my-nav">
+      <scrollactive ref="scrollactive" class="my-nav" offset="0"active-class="active">
 
         <ul>
           <li>
@@ -27,7 +27,7 @@
           </li>
           
           <li>
-            <a href="#three" class="scrollactive-item">鸣谢/捐赠</a>
+            <a href="#four" class="scrollactive-item">鸣谢/捐赠</a>
           </li>
 
         </ul>        
@@ -54,8 +54,46 @@ export default {
 
 }
 </script>
-<style >
-,
+<style language = "styl">
+
+/* .is-active::after {
+  background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
+  background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
+  background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+  -moz-transition: max-width 0.2s ease;
+  -webkit-transition: max-width 0.2s ease;
+  -ms-transition: max-width 0.2s ease;
+  transition: max-width 0.2s ease;
+  max-width: 0;
+}
+
+.is-active::before {
+  border-radius: 0.2em;
+  bottom: 0;
+  content: '';
+  height: 0.2em;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .is-active::after {
+    background-image: none;
+    background-color: #b74e91;
+    max-width: 100%;
+  }
+  .is-active::before {
+    border-radius: 0.2em;
+    bottom: 0;
+    content: '';
+    height: 0.2em;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+} */
 section{
   margin: 0;
   padding: 0;

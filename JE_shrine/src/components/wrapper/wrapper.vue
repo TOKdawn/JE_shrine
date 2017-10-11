@@ -2,7 +2,7 @@
     
     <div id="wrapper">
         <!-- Intro -->
-        <section id="intro" class="wrapper style1 fullscreen fade-up section-list-hook">
+        <section id="intro" class="wrapper style1 fullscreen fade-up section-list-hook ">
             <!-- <div class="inner">
                 <h1>Hyperspace</h1>
                 <p>Just another fine responsive site template designed by
@@ -60,10 +60,7 @@
                 </div>
             </section> -->
         </section>
-        <!-- <div class="copyrights">Collect from
-            <a href="http://www.cssmoban.com/">企业网站模板</a>
-        </div> -->
-
+       
         <!-- Two -->
         <section id="two" class="wrapper style3 fade-up section-list-hook">
             <div class="inner">
@@ -186,73 +183,89 @@
                 </div>
             </div>
         </section>
+        
+    <section id="four" class="wrapper style3 fade-up section-list-hook">
+        <div class="inner">
+            <h2>What we do</h2>
+            <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+            <div class="features">
+                <section>
+                    <span class="icon major fa-code"></span>
+                    <h3>Lorem ipsum amet</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-lock"></span>
+                    <h3>Aliquam sed nullam</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-cog"></span>
+                    <h3>Sed erat ullam corper</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-desktop"></span>
+                    <h3>Veroeros quis lorem</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-chain"></span>
+                    <h3>Urna quis bibendum</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-diamond"></span>
+                    <h3>Aliquam urna dapibus</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+            </div>
+            <ul class="actions">
+                <li>
+                    <a href="#" class="button">Learn more</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
     </div>
 </template>
 <script type="text/ecmascript-6">
-import BScroll from 'better-scroll'
+
 export default {
-    data () {
-        return {
-            listHeight: [],
-            scrollY: 0
-        }
-    },
-    created () {
-    },
-     mounted () {
-         console.log('创建')
-        this._initScroll()
-        this._calculateHeight()
-        console.log(this.listHeight) 
-        console.log('结束')
-    },   
-    methods: {
-        _initScroll () {
-            const wrapperz = document.querySelector('#wrapper')
-            console.log(wrapperz)
-            this.wrapperScroll = new BScroll(wrapperz)
-        },
-        _calculateHeight () {
-            let sectionList = document.getElementsByClassName('section-list-hook')
-            let height = 0
-            this.listHeight.push(height)
-            for (let i = 0; i < sectionList.length; i++) {
-                let item = sectionList[i]
-                height += item.clientHeight
-                this.listHeight.push(height)
-            }
-        }
-    }
+  
 }
 </script>
 <style lang="stylus">
 
 
-// #wrapper {
-//     position relative
-//     margin-left: 23em
-//     height 100vh
-//     vertical-align baseline
-//     box-sizing border-box
-// }
+#wrapper {
+    position relative
+    margin-left: 23em
+    height 100vh
+    vertical-align baseline
+    box-sizing border-box
+   
+}
 
-// @media screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
 
-//     #wrapper {
-//         position relative
-//         margin-left: 0
-//         padding-top: 4.5em
-//         height 100vh
-//         vertical-align baseline
-//         box-sizing border-box
-//     }
-// }
-// @media screen and (max-width: 736px) {
+    #wrapper {
+        position relative
+        margin-left: 0
+        padding-top: 4.5em
+        height 100vh
+        vertical-align baseline
+        box-sizing border-box
 
-//     #wrapper {
-//         padding-top: 0;
-//     }
-// }
+    }
+}
+@media screen and (max-width: 736px) {
+
+    #wrapper {
+        padding-top: 0;
+    }
+}
 
 </style>
 
