@@ -1,54 +1,51 @@
 <template>
-  
-  <section id="sidebar">
-
-      <a href="#" class="profilepic">
+  <section id="sidebar" >
+      <a href="http://www.baidu.com/" class="profilepic ">
         <img :src=src width="100%" height="100%">
       </a>
       <a href="#" class="button  center">登录/注册</a>
-
     <div class="inner">
-      <nav>
-        
-      <scrollactive ref="scrollactive" class="my-nav" offset="0"active-class="active">
-
-        <ul>
-          <li>
-            <a href="#intro" class="scrollactive-item">主页</a>
-          </li>
-          <li>
-            <a href="#one" class="scrollactive-item">分类</a>
-          </li>
-          <li>
-            <a href="#two" class="scrollactive-item">小工具</a>
-          </li>
-          <li>
-            <a href="#three" class="scrollactive-item">关于我们</a>
-          </li>
-          
-          <li>
-            <a href="#four" class="scrollactive-item">鸣谢/捐赠</a>
-          </li>
-
-        </ul>        
+      <nav>   
+      <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active">
+       <ul>
+  <!-- <transition-group name="fadeLeft" tag="ul"> -->
+         <li v-for="item in items" :key="item.herf"><a :href="item.href" class="scrollactive-item">{{item.text}}</a></li>
+  <!-- </transition-group> -->
+       </ul>
         </scrollactive>
       </nav>
-      
     </div>
-    
   <div id="contribute">
     投稿
   </div>
-
   </section>
-
 </template>
 <script>
-
+ require('vue2-animate/dist/vue2-animate.min.css')
 export default {
+
   data () {
     return {
-      src: require('./img/Akkarin.jpg')
+      src: require('./img/Akkarin.jpg'),
+      items: [{
+        href: '#intro',
+        text: '主页'
+      }, {
+          href: '#one',
+          text: '分类'
+
+      }, {
+          href: '#two',
+          text: '小工具'
+
+      }, {
+          href: '#three',
+          text: '关于我们'
+
+      }, {
+          href: '#four',
+          text: '鸣谢/捐赠'
+      }]
     }
   }
 
@@ -111,6 +108,8 @@ section{
  text-align : center;
  line-height : 70px;
  transition : right 0.2s;
+ cursor:pointer;
+
 
 }
 #contribute:hover{
@@ -139,12 +138,12 @@ section{
     overflow: hidden;
     background: #88acdb;
     -webkit-transition: all .2s ease-in;
-    display: -webkit-box;
+
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
     -webkit-box-align: center;
     text-align: center;
-
+    cursor:pointer;
 }
    
 
@@ -368,13 +367,16 @@ body.is-loading #sidebar nav ul li {
   overflow: hidden;
   background: #88acdb;
   -webkit-transition: all .2s ease-in;
-  display: -webkit-box;
+ 
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
   -webkit-box-align: center;
   text-align: center;
   float: right;
-  right: 120px;
+  right: 120px; 
+  cursor:pointer;
+  z-index: 10;
+
 }
 
 
@@ -465,7 +467,6 @@ body.is-loading #sidebar nav ul li {
     overflow: hidden;
     background: #88acdb;
     -webkit-transition: all .2s ease-in;
-    display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
     -webkit-box-align: center;
