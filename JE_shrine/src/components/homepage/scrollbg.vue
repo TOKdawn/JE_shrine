@@ -1,32 +1,38 @@
 <template>
-      <section id="intro">
-            <div id="color"></div>
-            <ul id="bg">
-                  <img src="./40.png">
-                  <img src="./80.png">
-                  <img src="./70.png">
-                  <img src="./20.png">
-                  <img src="./10.png">
-                  <img src="./30.png">
-                  <img src="./60.png">
-                  <img src="./130.png">
-                  <img src="./120.png">
-                  <img src="./160.png">
-                  <img src="./20.png">
-                  <img src="./10.png">
-                  <img src="./140.png">
-                  <img src="./50.png">
-                  <img src="./90.png">
-                  <img src="./30.png">
-            </ul>
-      </section>
+     <div id="scrollbg">
+      <div id="color"></div>
+      <ul id="bg">
+            <img src="./40.png">
+            <img src="./80.png">
+            <img src="./70.png">
+            <img src="./20.png">
+            <img src="./10.png">
+            <img src="./30.png">
+            <img src="./60.png">
+            <img src="./130.png">
+            <img src="./120.png">
+            <img src="./160.png">
+            <img src="./20.png">
+            <img src="./10.png">
+            <img src="./140.png">
+            <img src="./50.png">
+            <img src="./90.png">
+            <img src="./30.png">
+      </ul>
+      </div>
 </template>
 
 <script>
+export default{
+     
+}
 
 </script>
 
 <style lang="stylus">
+#scrollbg{
+      z-index -1
+}
 #color {
       position: absolute;
       top: 0;
@@ -36,6 +42,7 @@
       background-color: #2C3F43;
       background: linear-gradient(to bottom, #252525 0%, #386B76 100%);
       background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
+      background-attachment: fixed;
 }
 
 @keyframes square {
@@ -45,8 +52,8 @@
       }
 
       100% {
-            -webkit-transform: translateY(-1200px) rotate(600deg);
-            transform: translateY(-1200px) rotate(600deg);
+            -webkit-transform: translateY(-1500px) rotate(600deg);
+            transform: translateY(-1500px) rotate(600deg);
       }
 }
 
@@ -63,11 +70,12 @@
 }
 
 #bg {
-      height: 110%;
+      height 110%
+    
 }
 
 #bg img {
-      position: absolute;
+      position absolute
       list-style: none;
       display: block;
       opacity: 0.15;
@@ -189,22 +197,10 @@
       -webkit-animation-delay: 7s;
 }
 
-#intro {
-      display: -moz-flex;
-      display: -webkit-flex;
-      display: -ms-flex;
-      display: flex;
-      -moz-flex-direction: column;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -moz-justify-content: center;
-      -webkit-justify-content: center;
-      -ms-justify-content: center;
-      justify-content: center;
-      min-height: 100vh;
-      position: relative;
-      // background-color :#512da8
+
+#inner {
+      position relative
+      
 }
 </style>
 

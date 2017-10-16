@@ -1,50 +1,52 @@
 <template>
-  <section id="sidebar" >
-      <a href="http://www.baidu.com/" class="profilepic ">
-        <img :src=src width="100%" height="100%">
-      </a>
-      <a href="#" class="button  center">登录/注册</a>
+  <section id="sidebar">
+    <a href="http://www.baidu.com/" class="profilepic ">
+      <img :src=src width="100%" height="100%">
+    </a>
+    <a href="#" class="button  center">登录/注册</a>
     <div class="inner">
-      <nav>   
-      <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active">
-       <ul>
-  <!-- <transition-group name="fadeLeft" tag="ul"> -->
-         <li v-for="item in items" :key="item.herf"><a :href="item.href" class="scrollactive-item">{{item.text}}</a></li>
-  <!-- </transition-group> -->
-       </ul>
+      <nav>
+        <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active">
+          <ul>
+            <!-- <transition-group name="fadeLeft" tag="ul"> -->
+            <li v-for="item in items" :key="item.herf">
+              <a :href="item.href" class="scrollactive-item">{{item.text}}</a>
+            </li>
+            <!-- </transition-group> -->
+          </ul>
         </scrollactive>
       </nav>
     </div>
-  <div id="contribute">
-    投稿
-  </div>
+    <div id="contribute">
+      投稿
+    </div>
   </section>
 </template>
 <script>
- require('vue2-animate/dist/vue2-animate.min.css')
+// require('vue2-animate/dist/vue2-animate.min.css')
 export default {
 
-  data () {
+  data() {
     return {
       src: require('./img/Akkarin.jpg'),
       items: [{
         href: '#intro',
         text: '主页'
       }, {
-          href: '#one',
-          text: '分类'
+        href: '#one',
+        text: '分类'
 
       }, {
-          href: '#two',
-          text: '小工具'
+        href: '#two',
+        text: '小工具'
 
       }, {
-          href: '#three',
-          text: '关于我们'
+        href: '#three',
+        text: '关于我们'
 
       }, {
-          href: '#four',
-          text: '鸣谢/捐赠'
+        href: '#four',
+        text: '鸣谢/捐赠'
       }]
     }
   }
@@ -52,7 +54,6 @@ export default {
 }
 </script>
 <style language = "styl">
-
 /* .is-active::after {
   background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
   background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
@@ -91,61 +92,61 @@ export default {
     width: 100%;
   }
 } */
-section{
+
+section {
   margin: 0;
   padding: 0;
 }
 
-#contribute{
-   background-color: rgba(210,58,81, 0.9);
+#contribute {
+  background-color: rgba(210, 58, 81, 0.9);
   color: #eee;
   width: 80px;
- height: 70px;
- position: absolute;
- bottom: 10px;
- right: -10px;
- font-size: 1.5em;
- text-align : center;
- line-height : 70px;
- transition : right 0.2s;
- cursor:pointer;
-
-
+  height: 70px;
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 70px;
+  transition: right 0.2s;
+  cursor: pointer;
 }
-#contribute:hover{
-  
- right: -20px;
 
-}
-.center{
-   height: 6vh;
-   width: 80%;
-    display: block;
-    margin: 3vh auto 0vh auto;
-    text-align: content;
-    line-height: 6vh;
-    font-size: 0.8em;
+#contribute:hover {
 
+  right: -20px;
 }
-.profilepic{
-    display: block;
-    border: 5px solid #fff;
-    border-radius: 300px;
-    width: 14vh;
-    height: 14vh;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    background: #88acdb;
-    -webkit-transition: all .2s ease-in;
 
-    -webkit-box-orient: horizontal;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    text-align: center;
-    cursor:pointer;
+.center {
+  height: 6vh;
+  width: 80%;
+  display: block;
+  margin: 3vh auto 0vh auto;
+  text-align: content;
+  line-height: 6vh;
+  font-size: 0.8em;
 }
-   
+
+.profilepic {
+  display: block;
+  border: 5px solid #fff;
+  border-radius: 300px;
+  width: 14vh;
+  height: 14vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #88acdb;
+  -webkit-transition: all .2s ease-in;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  text-align: center;
+  cursor: pointer;
+}
+
 
 #sidebar {
   padding: 5vh 4vh 0vh 4vh;
@@ -160,7 +161,6 @@ section{
   top: 0;
   width: 18em;
   z-index: 10000;
-
 }
 
 #sidebar>.inner {
@@ -344,40 +344,38 @@ body.is-loading #sidebar nav ul li {
   }
 
 
-  
-.center {
-  height: 6vh;
-  width: 80%;
-  display: none;
-  margin: 3vh auto 0vh auto;
-  text-align: content;
-  line-height: 6vh;
-  font-size: 0.8em;
 
-}
+  .center {
+    height: 6vh;
+    width: 80%;
+    display: none;
+    margin: 3vh auto 0vh auto;
+    text-align: content;
+    line-height: 6vh;
+    font-size: 0.8em;
+  }
 
-.profilepic {
-  display: block;
-  border: 1px solid #fff;
-  border-radius: 300px;
-  width: 3.3em;
-  height: 3.3em;
-  margin:  .1em ;
-  position: relative;
-  overflow: hidden;
-  background: #88acdb;
-  -webkit-transition: all .2s ease-in;
- 
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  text-align: center;
-  float: right;
-  right: 120px; 
-  cursor:pointer;
-  z-index: 10;
+  .profilepic {
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 300px;
+    width: 3.3em;
+    height: 3.3em;
+    margin: .1em;
+    position: relative;
+    overflow: hidden;
+    background: #88acdb;
+    -webkit-transition: all .2s ease-in;
 
-}
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    text-align: center;
+    float: right;
+    right: 120px;
+    cursor: pointer;
+    z-index: 10;
+  }
 
 
   #sidebar {
@@ -400,8 +398,8 @@ body.is-loading #sidebar nav ul li {
     -ms-align-items: stretch;
     align-items: stretch;
     line-height: inherit;
-  min-height: 100%;
-  position: absolute;
+    min-height: 100%;
+    position: absolute;
   }
   #sidebar nav {
     height: inherit;
@@ -435,7 +433,7 @@ body.is-loading #sidebar nav ul li {
 }
 
 
-  @media screen and (max-width:768px) {
+@media screen and (max-width:768px) {
 
   #contribute {
     background-color: rgba(210, 58, 81, 1);
@@ -474,12 +472,11 @@ body.is-loading #sidebar nav ul li {
     float: right;
     right: 100px;
   }
+}
 
-  }
 @media screen and (max-width: 736px) {
   #sidebar {
     display: none;
   }
 }
-
 </style>
