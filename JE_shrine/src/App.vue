@@ -8,13 +8,11 @@
 <script>
 import wrapper from 'components/wrapper/wrapper.vue'// 主内容框架
 import sidebar from 'components/sidebar/sidebar.vue'// 侧边栏
-
 export default {
   components: {
     sidebar,
     wrapper
   }
-
 }
 </script>
 

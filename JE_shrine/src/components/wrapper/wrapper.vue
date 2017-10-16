@@ -1,6 +1,8 @@
 <template>
     <div id="wrapper">
         <!-- Intro -->
+<<<<<<< HEAD
+<<<<<<< HEAD
         <section id="intro">
             <scrollbg></scrollbg>
             <div id="intro_inner">
@@ -11,6 +13,28 @@
 
         <!-- One -->
         <section id="one" class="wrapper style2 spotlights ">
+=======
+=======
+>>>>>>> parent of 9c78111... 背景图
+        <section id="intro" class="wrapper style1 fullscreen fade-up section-list-hook ">
+            <!-- <div class="inner">
+                <h1>Hyperspace</h1>
+                <p>Just another fine responsive site template designed by
+                    <a href="http://html5up.net">HTML5 UP</a><br /> and released for free under the
+                    <a href="http://html5up.net/license">Creative Commons</a>.</p>
+                <ul class="actions">
+                    <li>
+                        <a href="#one" class="button scrolly">Learn more</a>
+                    </li>
+                </ul>
+            </div> -->
+        </section>
+        <!-- One -->
+        <section id="one" class="wrapper style2 spotlights section-list-hook" >
+<<<<<<< HEAD
+>>>>>>> parent of 9c78111... 背景图
+=======
+>>>>>>> parent of 9c78111... 背景图
             <section>
                 <a href="#" class="image"><img src="" alt="" data-position="center center" /></a>
                 <div class="content">
@@ -56,7 +80,7 @@
         </section>
 
         <!-- Two -->
-        <section id="two" class="wrapper style3 fade-up ">
+        <section id="two" class="wrapper style3 fade-up section-list-hook">
             <div class="inner">
                 <h2>What we do</h2>
                 <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -101,7 +125,7 @@
         </section>
 
         <!-- Three -->
-        <section id="three" class="wrapper style1 fade-up ">
+        <section id="three" class="wrapper style1 fade-up section-list-hook">
             <div class="inner">
                 <h2>Get in touch</h2>
                 <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -177,6 +201,7 @@
                 </div>
             </div>
         </section>
+<<<<<<< HEAD
 
         <section id="four" class="wrapper style3 fade-up ">
             <div class="inner">
@@ -219,12 +244,52 @@
                         <a href="#" class="button">Learn more</a>
                     </li>
                 </ul>
+=======
+        
+    <section id="four" class="wrapper style3 fade-up section-list-hook">
+        <div class="inner">
+            <h2>What we do</h2>
+            <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+            <div class="features">
+                <section>
+                    <span class="icon major fa-code"></span>
+                    <h3>Lorem ipsum amet</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-lock"></span>
+                    <h3>Aliquam sed nullam</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-cog"></span>
+                    <h3>Sed erat ullam corper</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-desktop"></span>
+                    <h3>Veroeros quis lorem</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-chain"></span>
+                    <h3>Urna quis bibendum</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+                <section>
+                    <span class="icon major fa-diamond"></span>
+                    <h3>Aliquam urna dapibus</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                </section>
+>>>>>>> parent of 9c78111... 背景图
             </div>
         </section>
 
     </div>
 </template>
 <script type="text/ecmascript-6">
+<<<<<<< HEAD
+<<<<<<< HEAD
 // import WOW from 'js/wow.min.js'
 import scrollbg from 'components/homepage/scrollbg.vue'
 export default {
@@ -237,6 +302,16 @@ export default {
     components: {
         scrollbg
     }
+=======
+
+export default {
+  
+>>>>>>> parent of 9c78111... 背景图
+=======
+
+export default {
+  
+>>>>>>> parent of 9c78111... 背景图
 }
 </script>
 <style >
@@ -244,6 +319,7 @@ body {
     font-family: Helvetic SimHei Sans SimSun;
 }
 
+<<<<<<< HEAD
 #intro_inner {
     position: relative;
     top: -30vh;
@@ -265,6 +341,7 @@ body {
     font-size: 2.75em;
 }
 
+<<<<<<< HEAD
 #infro_inner, div {
     font-size: 1.25em;
     color: #000;
@@ -287,6 +364,10 @@ body {
     min-height: 100vh;
     position: relative;
 }
+=======
+>>>>>>> parent of 9c78111... 背景图
+=======
+>>>>>>> parent of 9c78111... 背景图
 
 #wrapper {
     position: relative;
