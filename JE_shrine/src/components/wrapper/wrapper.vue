@@ -7,11 +7,10 @@
                 <h1 id="intro_title">{{title}}</h1>
                 <div id="intro_infor">{{infor}}</div>
             </div>
-
             <div class="6u 12u$(xsmall) " id="search">
-                <input type="text" name="demo-name"  value="" placeholder="Name">
+                <input type="text" name="demo-name"  value="" placeholder="请输入曲谱名">
+                <div class="button ">搜索</div>
             </div>
-
         </section>
         <!-- One -->
         <section id="one" class="wrapper style2 spotlights ">
@@ -252,10 +251,24 @@ body {
 #search{
  display: inline;
  margin: -24vh auto 0 auto;
+ /* vertical-align: top; */
+ /* background-color: #aadcda; */
+ font-size: auto;
+}
+#search div{
+    width: 20%;
+    padding: 0;
+    height: 2.75em;
+    font-size: 1em;
+    line-height: 2.75em;
+    letter-spacing:0.1em;
 }
 #search input{
     background-color: rgba(255, 255, 255, .2);
-   
+    color: #fff;
+    display: block;
+    float: left;
+    width: 77%;
 }
 #intro_inner {
     position: relative;

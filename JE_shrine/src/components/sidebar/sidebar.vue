@@ -364,8 +364,24 @@ body.is-loading #sidebar nav ul li {
     transition: right 0.2s;
     border-radius: 5px;
   }
+  #contribute::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+    border-radius: 5px;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 0px;
+    display: none;
+    right: 0px;
+  }
   #contribute:hover {
     right: 10px;
+    bottom: -10px;
+  }
+  #contribute:hover::after {
+    display: block;
   }
   .center {
     height: 6vh;
