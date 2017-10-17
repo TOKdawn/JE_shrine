@@ -1,40 +1,20 @@
 <template>
     <div id="wrapper">
         <!-- Intro -->
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section id="intro">
             <scrollbg></scrollbg>
             <div id="intro_inner">
-                <h1>{{title}}</h1>
-                <div>{{infor}}</div>
+                <h1 id="intro_title">{{title}}</h1>
+                <div id="intro_infor">{{infor}}</div>
             </div>
-        </section>
 
+            <div class="6u 12u$(xsmall) " id="search">
+                <input type="text" name="demo-name"  value="" placeholder="Name">
+            </div>
+
+        </section>
         <!-- One -->
         <section id="one" class="wrapper style2 spotlights ">
-=======
-=======
->>>>>>> parent of 9c78111... 背景图
-        <section id="intro" class="wrapper style1 fullscreen fade-up section-list-hook ">
-            <!-- <div class="inner">
-                <h1>Hyperspace</h1>
-                <p>Just another fine responsive site template designed by
-                    <a href="http://html5up.net">HTML5 UP</a><br /> and released for free under the
-                    <a href="http://html5up.net/license">Creative Commons</a>.</p>
-                <ul class="actions">
-                    <li>
-                        <a href="#one" class="button scrolly">Learn more</a>
-                    </li>
-                </ul>
-            </div> -->
-        </section>
-        <!-- One -->
-        <section id="one" class="wrapper style2 spotlights section-list-hook" >
-<<<<<<< HEAD
->>>>>>> parent of 9c78111... 背景图
-=======
->>>>>>> parent of 9c78111... 背景图
             <section>
                 <a href="#" class="image"><img src="" alt="" data-position="center center" /></a>
                 <div class="content">
@@ -64,19 +44,19 @@
                 </div>
             </section>
             <!-- <section>
-                                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-                                <div class="content">
-                                    <div class="inner">
-                                        <h2>Ultricies aliquam</h2>
-                                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-                                        <ul class="actions">
-                                            <li>
-                                                <a href="#" class="button">Learn more</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section> -->
+                                                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+                                                <div class="content">
+                                                    <div class="inner">
+                                                        <h2>Ultricies aliquam</h2>
+                                                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                                                        <ul class="actions">
+                                                            <li>
+                                                                <a href="#" class="button">Learn more</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section> -->
         </section>
 
         <!-- Two -->
@@ -201,7 +181,6 @@
                 </div>
             </div>
         </section>
-<<<<<<< HEAD
 
         <section id="four" class="wrapper style3 fade-up ">
             <div class="inner">
@@ -244,52 +223,13 @@
                         <a href="#" class="button">Learn more</a>
                     </li>
                 </ul>
-=======
-        
-    <section id="four" class="wrapper style3 fade-up section-list-hook">
-        <div class="inner">
-            <h2>What we do</h2>
-            <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-            <div class="features">
-                <section>
-                    <span class="icon major fa-code"></span>
-                    <h3>Lorem ipsum amet</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-lock"></span>
-                    <h3>Aliquam sed nullam</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-cog"></span>
-                    <h3>Sed erat ullam corper</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-desktop"></span>
-                    <h3>Veroeros quis lorem</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-chain"></span>
-                    <h3>Urna quis bibendum</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-diamond"></span>
-                    <h3>Aliquam urna dapibus</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
->>>>>>> parent of 9c78111... 背景图
             </div>
         </section>
 
     </div>
 </template>
+
 <script type="text/ecmascript-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
 // import WOW from 'js/wow.min.js'
 import scrollbg from 'components/homepage/scrollbg.vue'
 export default {
@@ -302,50 +242,41 @@ export default {
     components: {
         scrollbg
     }
-=======
-
-export default {
-  
->>>>>>> parent of 9c78111... 背景图
-=======
-
-export default {
-  
->>>>>>> parent of 9c78111... 背景图
 }
 </script>
-<style >
+
+<style>
 body {
-    font-family: Helvetic SimHei Sans SimSun;
+    font-family: "Helvetic", "SimHei", "Sans", "SimSun", "微软正黑体", "新细明体", "Arial";
 }
-
-<<<<<<< HEAD
+#search{
+ display: inline;
+ margin: -24vh auto 0 auto;
+}
+#search input{
+    background-color: rgba(255, 255, 255, .2);
+   
+}
 #intro_inner {
     position: relative;
-    top: -30vh;
-    left: -10px;
+    top: -39vh;
+    left: 0;
     width: auto;
-    font-family: Helvetic SimHei Sans SimSun;
+    font-family: "微软正黑体", "新细明体", "Helvetic", "SimHei", "Sans", "SimSun", "Arial";
+    text-align: left;
+    padding-left: 5em;
 }
 
-#intro_inner {
-    position: relative;
-    top: -30vh;
-    left: -10px;
-    width: auto;
+#intro_inner h1 {
     font-family: inherit;
+    font-size: 3em;
+    margin: 0;
 }
 
-#infro_inner,  h1 {
-    font-family: inherit;
-    font-size: 2.75em;
-}
-
-<<<<<<< HEAD
-#infro_inner, div {
+#intro_inner div {
     font-size: 1.25em;
-    color: #000;
-    background-color: #8c9eff;
+    color: #fff;
+    /* background-color: #8c9eff; */
 }
 
 #intro {
@@ -364,10 +295,6 @@ body {
     min-height: 100vh;
     position: relative;
 }
-=======
->>>>>>> parent of 9c78111... 背景图
-=======
->>>>>>> parent of 9c78111... 背景图
 
 #wrapper {
     position: relative;
@@ -387,6 +314,7 @@ body {
         box-sizing: border-box;
     }
 }
+
 @media screen and (max-width: 736px) {
     #wrapper {
         padding-top: 0;

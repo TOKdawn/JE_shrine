@@ -73,26 +73,7 @@ module.exports = {
                     name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
             },
-            { <<
-                << << < HEAD <<
-                << << < HEAD
-                test: /\.styl$/,
-                loader: 'style-loader!css-loader!stylus-loader'
 
-            },
-            {
-                test: /\.css/,
-                loader: 'style-loader!css-loader' ===
-                    === =
-                    test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-                >>>
-                >>> > parent of 9 c78111...背景图 ===
-                === =
-                test: /
-            }\.css$ / ,
-            use: ['style-loader', 'css-loader'], >>>
-            >>> > parent of 9 c78111...背景图
         ]
     },
     plugins: [

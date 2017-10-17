@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <section id="sidebar">
     <a href="http://www.baidu.com/" class="profilepic ">
       <img :src=src width="100%" height="100%">
@@ -18,60 +17,15 @@
 
         </scrollactive>
       </nav>
-      
+
     </div>
     <div id="contribute">
       投稿
     </div>
-=======
-  
-  <section id="sidebar">
-
-      <a href="#" class="profilepic">
-        <img :src=src width="100%" height="100%">
-      </a>
-      <a href="#" class="button  center">登录/注册</a>
-
-    <div class="inner">
-      <nav>
-        
-      <scrollactive ref="scrollactive" class="my-nav" offset="0"active-class="active">
-
-        <ul>
-          <li>
-            <a href="#intro" class="scrollactive-item">主页</a>
-          </li>
-          <li>
-            <a href="#one" class="scrollactive-item">分类</a>
-          </li>
-          <li>
-            <a href="#two" class="scrollactive-item">小工具</a>
-          </li>
-          <li>
-            <a href="#three" class="scrollactive-item">关于我们</a>
-          </li>
-          
-          <li>
-            <a href="#four" class="scrollactive-item">鸣谢/捐赠</a>
-          </li>
-
-        </ul>        
-        </scrollactive>
-      </nav>
-      
-    </div>
-    
-  <div id="contribute">
-    投稿
-  </div>
->>>>>>> parent of 9c78111... 背景图
-
   </section>
-
 </template>
-<script>
-<<<<<<< HEAD
 
+<script>
 export default {
 
   data() {
@@ -97,57 +51,51 @@ export default {
         text: '鸣谢/捐赠'
       }]
 
-=======
-
-export default {
-  data () {
-    return {
-      src: require('./img/Akkarin.jpg')
->>>>>>> parent of 9c78111... 背景图
     }
   }
 
 }
 </script>
+
 <style language = "styl">
 /* .is-active::after {
-  background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-  background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-  background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-  background-image: linear-gradient(to right, #5e42a6, #b74e91);
-  -moz-transition: max-width 0.2s ease;
-  -webkit-transition: max-width 0.2s ease;
-  -ms-transition: max-width 0.2s ease;
-  transition: max-width 0.2s ease;
-  max-width: 0;
-}
-
-.is-active::before {
-  border-radius: 0.2em;
-  bottom: 0;
-  content: '';
-  height: 0.2em;
-  position: absolute;
-  right: 0;
-  width: 100%;
-}
-
-@media screen and (max-width: 1280px) {
-  .is-active::after {
-    background-image: none;
-    background-color: #b74e91;
-    max-width: 100%;
-  }
-  .is-active::before {
-    border-radius: 0.2em;
-    bottom: 0;
-    content: '';
-    height: 0.2em;
-    position: absolute;
-    right: 0;
-    width: 100%;
-  }
-} */
+      background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
+      background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
+      background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
+      background-image: linear-gradient(to right, #5e42a6, #b74e91);
+      -moz-transition: max-width 0.2s ease;
+      -webkit-transition: max-width 0.2s ease;
+      -ms-transition: max-width 0.2s ease;
+      transition: max-width 0.2s ease;
+      max-width: 0;
+    }
+    
+    .is-active::before {
+      border-radius: 0.2em;
+      bottom: 0;
+      content: '';
+      height: 0.2em;
+      position: absolute;
+      right: 0;
+      width: 100%;
+    }
+    
+    @media screen and (max-width: 1280px) {
+      .is-active::after {
+        background-image: none;
+        background-color: #b74e91;
+        max-width: 100%;
+      }
+      .is-active::before {
+        border-radius: 0.2em;
+        bottom: 0;
+        content: '';
+        height: 0.2em;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+    } */
 
 section {
   margin: 0;
@@ -158,7 +106,6 @@ section {
   background-color: rgba(210, 58, 81, 0.9);
   color: #eee;
   width: 80px;
-<<<<<<< HEAD
   height: 70px;
   position: absolute;
   bottom: 10px;
@@ -171,20 +118,14 @@ section {
 }
 
 #contribute:hover {
-=======
- height: 70px;
- position: absolute;
- bottom: 10px;
- right: -10px;
- font-size: 1.5em;
- text-align : center;
- line-height : 70px;
- transition : right 0.2s;
-<<<<<<< HEAD
->>>>>>> parent of 9c78111... 背景图
-=======
->>>>>>> parent of 9c78111... 背景图
-
+  height: 70px;
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 70px;
+  transition: right 0.2s;
   right: -20px;
 }
 
@@ -198,7 +139,6 @@ section {
   font-size: 0.8em;
 }
 
-<<<<<<< HEAD
 .profilepic {
   display: block;
   border: 5px solid #fff;
@@ -210,37 +150,30 @@ section {
   overflow: hidden;
   background: #88acdb;
   -webkit-transition: all .2s ease-in;
-
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
   -webkit-box-align: center;
   text-align: center;
   cursor: pointer;
-=======
-}
-.profilepic{
-    display: block;
-    border: 5px solid #fff;
-    border-radius: 300px;
-    width: 14vh;
-    height: 14vh;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    background: #88acdb;
-    -webkit-transition: all .2s ease-in;
-    display: -webkit-box;
-    -webkit-box-orient: horizontal;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    text-align: center;
-
-<<<<<<< HEAD
->>>>>>> parent of 9c78111... 背景图
-=======
->>>>>>> parent of 9c78111... 背景图
 }
 
+.profilepic {
+  display: block;
+  border: 5px solid #fff;
+  border-radius: 300px;
+  width: 14vh;
+  height: 14vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #88acdb;
+  -webkit-transition: all .2s ease-in;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  text-align: center;
+}
 
 #sidebar {
   padding: 5vh 4vh 0vh 4vh;
@@ -417,7 +350,6 @@ body.is-loading #sidebar nav ul li {
 }
 
 @media screen and (max-width: 1280px) {
-
   #contribute {
     background-color: rgba(210, 58, 81, 1);
     color: #eee;
@@ -432,13 +364,9 @@ body.is-loading #sidebar nav ul li {
     transition: right 0.2s;
     border-radius: 5px;
   }
-
   #contribute:hover {
     right: 10px;
   }
-
-
-
   .center {
     height: 6vh;
     width: 80%;
@@ -448,8 +376,6 @@ body.is-loading #sidebar nav ul li {
     line-height: 6vh;
     font-size: 0.8em;
   }
-
-<<<<<<< HEAD
   .profilepic {
     display: block;
     border: 1px solid #fff;
@@ -461,7 +387,6 @@ body.is-loading #sidebar nav ul li {
     overflow: hidden;
     background: #88acdb;
     -webkit-transition: all .2s ease-in;
-
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
     -webkit-box-align: center;
@@ -471,29 +396,6 @@ body.is-loading #sidebar nav ul li {
     cursor: pointer;
     z-index: 10;
   }
-=======
-.profilepic {
-  display: block;
-  border: 1px solid #fff;
-  border-radius: 300px;
-  width: 3.3em;
-  height: 3.3em;
-  margin:  .1em ;
-  position: relative;
-  overflow: hidden;
-  background: #88acdb;
-  -webkit-transition: all .2s ease-in;
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  text-align: center;
-  float: right;
-  right: 120px;
-}
->>>>>>> parent of 9c78111... 背景图
-
-
   #sidebar {
     height: 3.5em;
     left: 0;
@@ -548,9 +450,7 @@ body.is-loading #sidebar nav ul li {
   }
 }
 
-
 @media screen and (max-width:768px) {
-
   #contribute {
     background-color: rgba(210, 58, 81, 1);
     color: #eee;
@@ -565,11 +465,9 @@ body.is-loading #sidebar nav ul li {
     transition: right 0.2s;
     border-radius: 5px;
   }
-
   #contribute:hover {
     right: 5px;
   }
-
   .profilepic {
     display: block;
     border: 1px solid #fff;

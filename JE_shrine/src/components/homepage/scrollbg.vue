@@ -26,7 +26,6 @@
 export default{
      
 }
-
 </script>
 
 <style lang="stylus">
@@ -39,9 +38,9 @@ export default{
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #2C3F43;
-      background: linear-gradient(to bottom, #252525 0%, #386B76 100%);
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
+      background-color: #5e42a6;
+      // background: linear-gradient(to bottom, #252525 0%, #386B76 100%);
+      background: linear-gradient(to bottom, #734b6d 0%, #4a148c 100%);
       background-attachment: fixed;
 }
 
@@ -197,10 +196,8 @@ export default{
       -webkit-animation-delay: 7s;
 }
 
-
 #inner {
-      position relative
-      
+      position relative  
 }
 </style>
 
