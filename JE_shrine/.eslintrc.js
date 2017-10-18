@@ -29,6 +29,9 @@ module.exports = {
         'no-multi-spaces': 1,
         'no-trailing-spaces': 1,
         'eol-last': 0,
-        'space-before-function-paren': 0
+        'space-before-function-paren': 0,
+        'space-before-blocks': 0,
+        'no-trailing-spaces': 0
+
     }
 }

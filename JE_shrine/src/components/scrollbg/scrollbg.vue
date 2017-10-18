@@ -99,7 +99,7 @@ export default{
 }
 
 #bg img:nth-child(3) {
-      left: 25%;
+      left: 75%;
       -webkit-animation-delay: 4s;
       animation-delay: 4s;
 }
@@ -133,8 +133,8 @@ export default{
 
 #bg img:nth-child(7) {
       left: 32%;
-      -webkit-animation-delay: 7s;
-      animation-delay: 7s;
+      -webkit-animation-delay: 27s;
+      animation-delay: 27s;
 }
 
 #bg img:nth-child(8) {
@@ -155,7 +155,7 @@ export default{
 }
 
 #bg img:nth-child(10) {
-      left: 73%;
+      left: 63%;
       -webkit-animation-delay: 11s;
       animation-delay: 11s;
 }
@@ -182,6 +182,8 @@ export default{
 
 #bg img:nth-child(14) {
       left: 65%;
+       -webkit-animation-delay: 19s;
+      animation-delay: 19s;
 }
 
 #bg img:nth-child(15) {

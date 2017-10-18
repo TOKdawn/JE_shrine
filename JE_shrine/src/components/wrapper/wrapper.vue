@@ -2,7 +2,7 @@
     <div id="wrapper">
         <!-- Intro -->
         <section id="intro">
-            <scrollbg></scrollbg>
+            <!-- <scrollbg></scrollbg> -->
             <div id="intro_inner">
                 <h1 id="intro_title">{{title}}</h1>
                 <div id="intro_infor">{{infor}}</div>
@@ -60,47 +60,7 @@
 
         <!-- Two -->
         <section id="two" class="wrapper style3 fade-up section-list-hook">
-            <div class="inner">
-                <h2>What we do</h2>
-                <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-                <div class="features">
-                    <section>
-                        <span class="icon major fa-code"></span>
-                        <h3>Lorem ipsum amet</h3>
-                        <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                    </section>
-                    <section>
-                        <span class="icon major fa-lock"></span>
-                        <h3>Aliquam sed nullam</h3>
-                        <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                    </section>
-                    <section>
-                        <span class="icon major fa-cog"></span>
-                        <h3>Sed erat ullam corper</h3>
-                        <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                    </section>
-                    <section>
-                        <span class="icon major fa-desktop"></span>
-                        <h3>Veroeros quis lorem</h3>
-                        <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                    </section>
-                    <section>
-                        <span class="icon major fa-chain"></span>
-                        <h3>Urna quis bibendum</h3>
-                        <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                    </section>
-                    <section>
-                        <span class="icon major fa-diamond"></span>
-                        <h3>Aliquam urna dapibus</h3>
-                        <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                    </section>
-                </div>
-                <ul class="actions">
-                    <li>
-                        <a href="#" class="button">Learn more</a>
-                    </li>
-                </ul>
-            </div>
+            <tspectrum>    </tspectrum>
         </section>
 
         <!-- Three -->
@@ -230,16 +190,18 @@
 
 <script type="text/ecmascript-6">
 // import WOW from 'js/wow.min.js'
-import scrollbg from 'components/homepage/scrollbg.vue'
+import scrollbg from 'components/scrollbg/scrollbg.vue'
+import tspectrum from 'components/Tspectrum/Tspectrum.vue'
 export default {
     data() {
         return {
-            title: 'JE自由神社',
+            title: 'MoeJE☆自由神社',
             infor: 'JE吧曲库,自由神社,页面升级,努力建设中QvQ,'
         }
     },
     components: {
-        scrollbg
+        scrollbg,
+        tspectrum
     }
 }
 </script>
@@ -262,13 +224,28 @@ body {
     font-size: 1em;
     line-height: 2.75em;
     letter-spacing:0.1em;
+    border-radius: 0em 0.25em 0.25em 0em;
+    float: left;
+    border-left: 0xp;
 }
 #search input{
-    background-color: rgba(255, 255, 255, .2);
+    background-color: rgba(255, 255, 255, .15);
     color: #fff;
     display: block;
     float: left;
     width: 77%;
+    border-radius: 0.25em 0em 0em 0.25em;
+    border-right: 0px;
+}
+
+#search input:hover {
+    border-right: 0px;
+}
+
+#search div:hover::after{
+    border-radius: 0.25em 0em 0em 0.25em;
+
+
 }
 #intro_inner {
     position: relative;

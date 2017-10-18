@@ -14,7 +14,6 @@
             </li>
             <!-- </transition-group> -->
           </ul>
-
         </scrollactive>
       </nav>
 
@@ -379,6 +378,7 @@ body.is-loading #sidebar nav ul li {
   #contribute:hover {
     right: 10px;
     bottom: -10px;
+
   }
   #contribute:hover::after {
     display: block;
