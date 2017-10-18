@@ -16,7 +16,6 @@
           </ul>
         </scrollactive>
       </nav>
-
     </div>
     <div id="contribute">
       投稿
@@ -26,7 +25,6 @@
 
 <script>
 export default {
-
   data() {
     return {
       src: require('./img/Akkarin.jpg'),

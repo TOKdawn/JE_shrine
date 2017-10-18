@@ -36,3 +36,13 @@
 		->查看发布
 		->捐助信息
 		->评论(待定)
+		
+
+
+##后台
+* 数据库: mongoDB 如果服务器内存不允许再考虑Mysql
+* 数据信息: 
+
+User	_id: ObjectId	uname: String	password_hash: String	salt: binary	role: int
+	Tag	"name": string	"count": intSong	"_id": ObjectId	"title": string	"alias": [string]	"userId": ObjectId	"author": "string"	"album": "string"	"tags": [Tag]	"content": string
+
