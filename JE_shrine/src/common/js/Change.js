@@ -1,7 +1,5 @@
 /* eslint-disable */
-function Change(strGet, tonalChange, toBD)
-
-{
+function Change(strGet, tonalChange, toBD) {
     var strNew = "";
     var indexChange = tonalChange;
     var levelCount = 0;

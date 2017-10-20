@@ -9,8 +9,8 @@
             <br />PS:重新转调前请按清除按钮
             <br />
             <hr class="hrborder" />
-            <a class="roll-button" onclick="toLower()">降半音</a>
-            <a class="roll-button" onclick="toHigher()">升半音</a>
+            <a class="roll-button" @click="toLower()">降半音</a>
+            <a class="roll-button" @click="toHigher()">升半音</a>
             <a class="roll-button" @click="clear(1)">清除</a>
             <div>
                 <input class="rightText" v-model="input1" placeholder="请在此处输入谱子"></input>
@@ -37,8 +37,7 @@
                 </option>
             </select>
             <div>{{selected2}}</div>
-
-            <button class="roll-button" type="button" onclick="changeForOnce()">确认转换</button>
+            <button class="roll-button" type="button" @click="changeForOnce">确认转换</button>
             <a class="roll-button" @click="clear(2)">清除</a>
             <br />
             <input class="rightText" v-model="input" placeholder="请在此处输入谱子"></input>
@@ -64,14 +63,13 @@
 <script>
 import 'js/BDParser.js'
 import 'js/BDToken.js'
-import 'js/Change.js'
 import 'js/Class.js'
 import 'js/Constant.js'
 import 'js/ConvertController.js'
 import 'js/NumberToken.js'
 import 'js/OtherToken.js'
 import 'js/Parser.js'
-
+import Change from 'js/Change.js'
 export default {
     data() {
         return {
@@ -154,7 +152,24 @@ export default {
             }
         },
         changeForOnce: function() {
-            
+            console.log(this.input)
+            console.log(this.output)
+            this.output = Change(this.input, this.selected - this.selected2, false)
+             console.log(this.output)
+        },
+        toHigher: function(){
+            if (this.input1 === '') {
+                this.output1 = Change(this.input1, 1, false)
+            } else {
+                this.output1 = Change(this.output1, 1, false)
+            }
+        },
+          toLower: function() {
+            if (this.input1 === '') {
+               this.output1 = Change(this.input1, -1, false)
+            } else {
+               this.output1 = Change(this.output1, -1, false)
+            }
         }
 
     }
@@ -163,7 +178,7 @@ export default {
 <style lang="stylus" >
 .rightText {
     background-color: #000;
-    font-color: o#f2f;
+    font-color: #f2f;
 }
 
 .show {
