@@ -144,14 +144,23 @@ export default {
     data() {
         return {
             title: 'MoeJE☆自由神社',
-            infor: 'JE吧曲库,自由神社,页面升级,努力建设中QvQ,'
+            infor: 'JE吧曲库,自由神社,页面升级,努力建设中QvQ,',
+            donationSeller: {}
         }
     },
     components: {
         scrollbg,
         tspectrum,
         donation
-    }
+    },
+  created() {
+        this.$http.get('assets/donation.json').then(response => {
+            this.donationData = response.body
+        }, response => {
+            console.log('未获取到数据')
+        })
+  }
+
 }
 </script>
 
