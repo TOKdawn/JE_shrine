@@ -5,6 +5,7 @@
              <p id="hello"> 路过的好人:<br/>
                &nbsp您好</p>
 
+
               MoeJE自由神社创建于2016年1月，我们长期致力于整合各类ACG乐谱，属于一个非营利性的网站。
 
               由于目前我们还在处于成长阶段，目前的开支费用完全由组织人员投入，但从长远来看这并不是合理的。
@@ -26,17 +27,38 @@
           </ul>
           </div>
         </div>
+      <div>鸣谢名单</div>
         <div class="table-wrapper">
+          <table class="alt">
+            <thead >
+            <tr>
+              <th>序号</th>
+              <th>捐赠者</th>
+              <th>数目</th>
+              <th>时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="trem in donation.data">
+              <td>{{trem.num}}</td>
+              <td>{{trem.name}}</td>
+              <td>{{trem.money}}</td>
+              <td>{{trem.time}}</td>
+            </tr>
+            </tbody>
+          </table>
         </div>
     </div>
 </template>
 <script>
    export default {
+      props: ['donation'],
        data() {
            return {
              describe_title: '捐助我们'
            }
        }
+
    }
 </script>
 <style lang="styl">
@@ -46,6 +68,7 @@
     #donation{
       text-align: left;
       background: #f3e5f5;
+      /*background: #25193f;*/
       width: 100%;
       padding: 30px 90px 0px 90px;
       font-size: 18px;
@@ -86,8 +109,15 @@
       font-size: 20px;
       margin-bottom: 10px;
     }
-  .table-wrapper{
-    background: #00ff00;
+  table.alt tbody tr td {
+    border-color: #25193f;
   }
+  table tbody tr:nth-child(2n + 1){
+    background: rgba(239,119,162,0.1);
+  }
+  table th{
+    color: #25193f;
+  }
+
 
 </style>

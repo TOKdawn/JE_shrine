@@ -24,7 +24,7 @@
         "vue2-animate": "^1.0.4",
         "stylus-loader": "^2.5.0",
         "stylus": "0.54.5",
-        "je-transcore": "0.1.1"
+        "je-transcore": "0.2.0"
     },
     "devDependencies": {
         "animate": "^1.0.0",

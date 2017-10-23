@@ -22,7 +22,6 @@
     </div>
   </section>
 </template>
-
 <script>
 export default {
   data() {
@@ -41,11 +40,11 @@ export default {
 
       }, {
         href: '#three',
-        text: '关于我们'
+        text: '鸣谢/捐赠'
 
       }, {
         href: '#four',
-        text: '鸣谢/捐赠'
+        text: '关于我们'
       }]
 
     }

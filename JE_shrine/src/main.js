@@ -10,6 +10,7 @@ import Scrollactive from 'vue-scrollactive'
 Vue.config.productionTip = false
 Vue.use(VueResource)
 Vue.use(Scrollactive)
+
     /* eslint-disable no-new */
 new Vue({
     el: '#app',
