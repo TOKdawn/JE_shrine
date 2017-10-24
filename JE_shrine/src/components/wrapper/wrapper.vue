@@ -131,14 +131,16 @@ body {
     font-family: "微软雅黑","Helvetic", "SimHei", "Sans", "SimSun", "微软正黑体", "新细明体", "Arial";
 }
 #two{
-  background-color: #3f3ba5;
+  background-color: #4b2d94;
   color: #fff;
 }
 #one{
-  background-color: #fbe9e7;
+  /*background-color: #fbe9e7;*/
+  background-color: #a6367e;
 }
 #three{
-  color: #2c3e50;
+  color: #fff;
+  background-color: #a6367e;
 }
 #search{
  display: inline;

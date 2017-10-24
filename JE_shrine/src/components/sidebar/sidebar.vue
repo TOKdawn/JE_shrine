@@ -3,7 +3,7 @@
     <a href="http://www.baidu.com/" class="profilepic ">
       <img :src=src width="100%" height="100%">
     </a>
-    <a href="#" class="button  center">登录/注册</a>
+    <router-link to= "/foo" class="button  center">登录/注册</router-link>
     <div class="inner">
       <nav>
         <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active">
@@ -64,7 +64,7 @@ export default {
       transition: max-width 0.2s ease;
       max-width: 0;
     }
-    
+
     .is-active::before {
       border-radius: 0.2em;
       bottom: 0;
@@ -74,7 +74,7 @@ export default {
       right: 0;
       width: 100%;
     }
-    
+
     @media screen and (max-width: 1280px) {
       .is-active::after {
         background-image: none;

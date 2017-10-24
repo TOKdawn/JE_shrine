@@ -23,11 +23,11 @@
           <li>帮助我们支付高昂的域名费用。</li>
           <li>帮助我们为自由神社做好风险措施，及时处理并修复可能出现的突发问题。</li>
           <li> 为日后举办一些活动，发放福利等提供资助。</li>
-          <li style="color: #e91e63"> ❤️&nbsp&nbsp我们非常感谢您的捐赠与支持，哪怕这份捐助微乎其微&nbsp❤️</li>
+          <li style="color: #f48fb1"> ❤️&nbsp&nbsp我们非常感谢您的捐赠与支持，哪怕这份捐助微乎其微&nbsp❤️</li>
           </ul>
           </div>
         </div>
-      <div>鸣谢名单</div>
+      <div>鸣谢名单:</div>
         <div class="table-wrapper">
           <table class="alt">
             <thead >
@@ -67,8 +67,9 @@
   }
     #donation{
       text-align: left;
-      background: #f3e5f5;
-      /*background: #25193f;*/
+      /*background: #a6367e;*/
+      /*background: #ad1457;*/
+
       width: 100%;
       padding: 30px 90px 0px 90px;
       font-size: 18px;
@@ -93,7 +94,7 @@
 
     }
     #donation h1 {
-      color: #000000;
+      color: #fff;
       margin-bottom: 10px;
     }
     #donation ul{
@@ -101,22 +102,22 @@
       line-height: 33px;
       width: auto;
       list-style:none;
-      color: #303f9f;
+      color: #03a9f4;
     }
     #hello{
-      color: #00d6b2;
+      color: #aed581;
       text-align: left;
       font-size: 20px;
       margin-bottom: 10px;
     }
   table.alt tbody tr td {
-    border-color: #25193f;
+    border-color: #c891b6;
   }
   table tbody tr:nth-child(2n + 1){
-    background: rgba(239,119,162,0.1);
+    background: rgba(239,119,162,0.3);
   }
   table th{
-    color: #25193f;
+    color: #c891b6;
   }
 
 
