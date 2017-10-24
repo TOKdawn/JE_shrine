@@ -9,7 +9,7 @@
             </div>
             <div class="6u 12u$(xsmall) " id="search">
                 <input type="text" name="demo-name"  value="" placeholder="请输入曲谱名">
-                <div class="button ">搜索</div>
+                <div class="button">搜索</div>
             </div>
         </section>
         <!-- One -->
@@ -45,12 +45,12 @@
         </section>
 
         <!-- Two -->
-        <section id="two" class="wrapper style3 fade-up section-list-hook">
+        <section id="two" class="wrapper  fade-up ">
             <tspectrum></tspectrum>
         </section>
 
         <!-- Three -->
-        <section id="three" class="wrapper style1 fade-up section-list-hook">
+        <section id="three" class="wrapper  fade-up ">
             <donation :donation="donationSeller" ></donation>
         </section>
 
@@ -120,7 +120,7 @@ export default {
                     'name': '过来米米亚',
                     'money': '16.00',
                     'time': '20170723 201425'
-                }]  
+                }]
          }
   }
 }
@@ -129,6 +129,16 @@ export default {
 <style>
 body {
     font-family: "微软雅黑","Helvetic", "SimHei", "Sans", "SimSun", "微软正黑体", "新细明体", "Arial";
+}
+#two{
+  background-color: #3f3ba5;
+  color: #fff;
+}
+#one{
+  background-color: #fbe9e7;
+}
+#three{
+  color: #2c3e50;
 }
 #search{
  display: inline;
