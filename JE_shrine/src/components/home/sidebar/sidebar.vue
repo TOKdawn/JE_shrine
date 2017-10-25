@@ -1,9 +1,9 @@
 <template>
   <section id="sidebar">
     <a href="http://www.baidu.com/" class="profilepic ">
-      <img :src=src width="100%" height="100%">
+      <img :src=src  width="100%" height="100%">
     </a>
-    <router-link to= "/foo" class="button  center">登录/注册</router-link>
+    <router-link to= "/text" class="button  center">登录/注册</router-link>
     <div class="inner">
       <nav>
         <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active">

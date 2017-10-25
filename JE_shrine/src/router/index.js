@@ -1,10 +1,12 @@
-import VueRouter from 'vue-router'
-import Vue from 'vue'
-Vue.use(VueRouter)
-const Foo = { template: '<div>foo</div>' }
-const routes = [
-  { path: '/foo', component: Foo }
-]
-export default new VueRouter({
-    routes: routes
-})
+import App from '../App.vue'
+export default [{
+  path: '/',
+  component: App,
+  children: [{
+    path: '',
+    component: r => require.ensure([], () => r(require('../components/home/home.vue')), 'home')
+  }, {
+    path: 'text',
+    component: r => require.ensure([], () => r(require('../components/text')), 'text')
+  }]
+}]

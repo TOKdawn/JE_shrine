@@ -64,10 +64,10 @@
 <script type="text/ecmascript-6">
  /* eslint-disable no-new */
 // import WOW from 'js/wow.min.js'
-import scrollbg from 'components/scrollbg/scrollbg.vue'
-import tspectrum from 'components/Tspectrum/Tspectrum.vue'
-import donation from 'components/donation/donation.vue'
-import about from 'components/about/about.vue'
+import scrollbg from 'components/home/scrollbg/scrollbg.vue'
+import tspectrum from 'components/home/Tspectrum/Tspectrum.vue'
+import donation from 'components/home/donation/donation.vue'
+import about from 'components/home/about/about.vue'
 export default {
     data() {
         return {

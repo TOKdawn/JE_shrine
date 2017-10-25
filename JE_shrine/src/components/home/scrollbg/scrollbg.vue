@@ -21,10 +21,9 @@
       </ul>
       </div>
 </template>
-
 <script>
 export default{
-     
+
 }
 </script>
 
@@ -70,7 +69,7 @@ export default{
 
 #bg {
       height 110%
-    
+
 }
 
 #bg img {
@@ -199,7 +198,7 @@ export default{
 }
 
 #inner {
-      position relative  
+      position relative
 }
 </style>
 

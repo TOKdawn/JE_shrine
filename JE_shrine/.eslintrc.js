@@ -26,13 +26,13 @@ module.exports = {
         //'indent': ['error', 4, { 'SwitchCase': 1 }],
         'indent': 0,
         // 'semi': ['error', 'always']
-        'no-multi-spaces': 1,
-        'no-trailing-spaces': 1,
+        'no-multi-spaces': 0,
+        'no-trailing-spaces': 0,
         'eol-last': 0,
         'space-before-function-paren': 0,
         'space-before-blocks': 0,
         'no-trailing-spaces': 0,
-        'no-unused-vars ': 1
+        'no-unused-vars ': 0
 
     }
 }
