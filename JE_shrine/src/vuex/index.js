@@ -2,8 +2,14 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 const state = {
-  value: 'text'
+  userdata: 'text'
+}
+const mutations = {
+    increment (state) {
+
+    }
 }
 export default new Vuex.Store({
-  state
+  state,
+  mutations
 })
