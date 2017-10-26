@@ -1,8 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
+/* eslint-disable no-new */
 const state = {
-  userdata: 'text'
+  userdata: {
+    '_id': {
+      '$oid': ''
+    },
+    'email': '',
+    'passwordHash': '',
+    'role': 0,
+    'username': ''
+  }
 }
 const mutations = {
     increment (state) {

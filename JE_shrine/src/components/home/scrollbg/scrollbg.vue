@@ -37,7 +37,7 @@ export default{
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #5e42a6;
+      background-color: #e8edec;
       // background: linear-gradient(to bottom, #252525 0%, #386B76 100%);
       background: linear-gradient(to bottom, #734b6d 0%, #4a148c 100%);
       background-attachment: fixed;
