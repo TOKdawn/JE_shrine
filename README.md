@@ -10,7 +10,7 @@ vue2 + vuex + vue-router + vue-axios + webpack + ES6
 
 ## 环境要求
 - node 6.0+
-
+- vue 2.5.2+
 ## 项目运行
 
 
