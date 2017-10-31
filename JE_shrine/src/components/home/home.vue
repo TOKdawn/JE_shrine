@@ -17,16 +17,12 @@
 </script>
 
 <style scoped>
-  @import '../../static/main.css';
+  @import '../../static/basic.css';
+  /* Basic */
   #zzz {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-  }
-  body, html {
-    margin: 0;
-    padding: 0;
-
   }
 </style>

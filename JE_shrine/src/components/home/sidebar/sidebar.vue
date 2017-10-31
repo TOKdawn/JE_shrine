@@ -1,18 +1,18 @@
 <template>
-  <section id="sidebar">
+  <div id="sidebar">
     <a href="http://www.baidu.com/" class="profilepic ">
       <img :src=src  width="100%" height="100%">
     </a>
-    <router-link to= "/text" class="button  center">登录/注册</router-link>
+    <router-link to= "/text" class="center"><el-button plain style="margin-right:27%">登录/注册</el-button></router-link>
     <div class="inner">
       <nav>
         <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active">
           <ul>
-            <!-- <transition-group name="fadeLeft" tag="ul"> -->
+
             <li v-for="item in items" :key="item.herf">
-              <a :href="item.href" class="scrollactive-item">{{item.text}}</a>
+              <a :href="item.href" class="scrollactive-item"><i :class="[iconfont,item.icon]"></i>{{item.text}}</a>
             </li>
-            <!-- </transition-group> -->
+          
           </ul>
         </scrollactive>
       </nav>
@@ -20,31 +20,37 @@
     <div id="contribute">
       投稿
     </div>
-  </section>
+  </div>
 </template>
 <script>
 export default {
   data() {
     return {
       src: require('./img/Akkarin.jpg'),
+      iconfont: 'iconfont',
       items: [{
         href: '#intro',
-        text: '主页'
+        text: '主页',
+        icon: 'icon-zhuye'
       }, {
         href: '#one',
-        text: '分类'
+        text: '分类',
+        icon: 'icon-leimupinleifenleileibie'
 
       }, {
         href: '#two',
-        text: '小工具'
+        text: '小工具',
+        icon: 'icon-gongju-copy'
 
       }, {
         href: '#three',
-        text: '鸣谢/捐赠'
+        text: '鸣谢/捐赠',
+        icon: 'icon-aixinjuanzeng'
 
       }, {
         href: '#four',
-        text: '关于我们'
+        text: '关于我们',
+        icon: 'icon-guanyu'
       }]
 
     }
@@ -52,53 +58,23 @@ export default {
 }
 </script>
 
-<style language = "styl">
-/* .is-active::after {
-      background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-      background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-      background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-      background-image: linear-gradient(to right, #5e42a6, #b74e91);
-      -moz-transition: max-width 0.2s ease;
-      -webkit-transition: max-width 0.2s ease;
-      -ms-transition: max-width 0.2s ease;
-      transition: max-width 0.2s ease;
-      max-width: 0;
-    }
-
-    .is-active::before {
-      border-radius: 0.2em;
-      bottom: 0;
-      content: '';
-      height: 0.2em;
-      position: absolute;
-      right: 0;
-      width: 100%;
-    }
-
-    @media screen and (max-width: 1280px) {
-      .is-active::after {
-        background-image: none;
-        background-color: #b74e91;
-        max-width: 100%;
-      }
-      .is-active::before {
-        border-radius: 0.2em;
-        bottom: 0;
-        content: '';
-        height: 0.2em;
-        position: absolute;
-        right: 0;
-        width: 100%;
-      }
-    } */
-
+<style lang= "scss">
+$--sidebar-background-color: #222729;
+$--element-blue: #b3e5fc;
+$--element-green: #f8bbd0;
+$--element-pink: #d95e76;
 section {
   margin: 0;
   padding: 0;
 }
-
+.iconfont{
+  font-size: 1.6em;
+  position: absolute;
+  margin-top: -.3em;
+  left:20px;
+}
 #contribute {
-  background-color: rgba(210, 58, 81, 0.9);
+  background-color: $--element-pink;
   color: #eee;
   width: 80px;
   height: 70px;
@@ -129,7 +105,8 @@ section {
   width: 80%;
   display: block;
   margin: 3vh auto 0vh auto;
-  text-align: content;
+  text-align: content !important;
+  z-index: 3;
   line-height: 6vh;
   font-size: 0.8em;
 }
@@ -156,8 +133,8 @@ section {
   display: block;
   border: 5px solid #fff;
   border-radius: 300px;
-  width: 14vh;
-  height: 14vh;
+  width: 10vh;
+  height: 10vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -171,8 +148,8 @@ section {
 }
 
 #sidebar {
-  padding: 5vh 4vh 0vh 4vh;
-  background: #312450;
+  padding: 5vh 0vh 0vh 0vh;
+  background-color: $--sidebar-background-color ;
   cursor: default;
   height: 100vh;
   left: 0;
@@ -206,9 +183,11 @@ section {
   -webkit-transition: opacity 1s ease;
   -ms-transition: opacity 1s ease;
   transition: opacity 1s ease;
-  min-height: 65vh;
+  min-height: 55vh;
   opacity: 1;
   width: 100%;
+  margin-top: -0px;
+  z-index: 1;
 }
 
 body.is-ie #sidebar>.inner {
@@ -280,54 +259,32 @@ body.is-ie #sidebar>.inner {
   -ms-transition: color 0.2s ease;
   transition: color 0.2s ease;
   border: 0;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.55);
   display: block;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: bold;
   letter-spacing: 0.25em;
   line-height: 1.75;
   outline: 0;
-  padding: 1.2em 0;
+  padding: 1.2em 1.8em;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-#sidebar nav a:before,
-#sidebar nav a:after {
-  border-radius: 0.2em;
-  bottom: 0;
-  content: '';
-  height: 0.2em;
-  position: absolute;
-  right: 0;
-  width: 100%;
-}
-
-#sidebar nav a:before {
-  background: #3c2c62;
-}
-
-#sidebar nav a:after {
-  background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-  background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-  background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-  background-image: linear-gradient(to right, #5e42a6, #b74e91);
-  -moz-transition: max-width 0.2s ease;
-  -webkit-transition: max-width 0.2s ease;
-  -ms-transition: max-width 0.2s ease;
-  transition: max-width 0.2s ease;
-  max-width: 0;
+  
 }
 
 #sidebar nav a:hover {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #sidebar nav a.active {
-  color: #ffffff;
+    background: rgba(0,0,0,0.15);
+    box-shadow: inset 0 0 0.25em 0 rgba(0,0,0,0.125);
+    color: #fff;
 }
-
+#sidebar nav a.active i{
+    color: $--element-pink;
+}
 #sidebar nav a.active:after {
   max-width: 100%;
 }
@@ -345,8 +302,34 @@ body.is-loading #sidebar nav ul li {
 }
 
 @media screen and (max-width: 1280px) {
+  #sidebar nav a:before,
+#sidebar nav a:after {
+  border-radius: 0.2em;
+  bottom: 0;
+  content: '';
+  height: 0.2em;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+#sidebar nav a:before {
+  background: #41484c;
+}
+
+#sidebar nav a:after {
+  background-image: -moz-linear-gradient(to right, $--element-blue, $--element-green);
+  background-image: -webkit-linear-gradient(to right, $--element-blue, $--element-green);
+  background-image: -ms-linear-gradient(to right, $--element-blue, $--element-green);
+  background-image: linear-gradient(to right, $--element-blue, $--element-green);
+  -moz-transition: max-width 0.2s ease;
+  -webkit-transition: max-width 0.2s ease;
+  -ms-transition: max-width 0.2s ease;
+  transition: max-width 0.2s ease;
+  max-width: 0;
+}
   #contribute {
-    background-color: rgba(210, 58, 81, 1);
+    background-color: $--element-pink;
     color: #eee;
     width: 80px;
     height: 70px;
@@ -429,7 +412,9 @@ body.is-loading #sidebar nav ul li {
     align-items: stretch;
     line-height: inherit;
     min-height: 100%;
+    /* background-color: $--element-blue; */
     position: absolute;
+    margin-top: 0em;
   }
   #sidebar nav {
     height: inherit;
@@ -464,7 +449,7 @@ body.is-loading #sidebar nav ul li {
 
 @media screen and (max-width:768px) {
   #contribute {
-    background-color: rgba(210, 58, 81, 1);
+    background-color: $--element-pink;
     color: #eee;
     width: 80px;
     height: 70px;

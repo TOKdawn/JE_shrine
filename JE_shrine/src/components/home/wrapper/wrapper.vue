@@ -54,7 +54,7 @@
             <donation :donation="donationSeller" ></donation>
         </section>
 
-        <section id="four" class="wrapper style3 fade-up ">
+        <section id="four" class="wrapper  fade-up ">
            <about></about>
         </section>
 
@@ -72,7 +72,7 @@ export default {
     data() {
         return {
             title: 'MoeJE☆自由神社',
-            infor: 'JE吧曲库,自由神社,页面升级,努力建设中QvQ,',
+            infor: 'JE吧曲库,自由神社,你要的谱子这里都有,',
             donationSeller: {}
         }
     },
@@ -126,21 +126,28 @@ export default {
 }
 </script>
 
-<style>
+
+<style lang='scss'>
 body {
     font-family: "微软雅黑","Helvetic", "SimHei", "Sans", "SimSun", "微软正黑体", "新细明体", "Arial";
 }
-#two{
-  background-color: #4b2d94;
-  color: #fff;
-}
 #one{
-  /*background-color: #fbe9e7;*/
-  background-color: #a6367e;
+  background-color: #f5fafa;
+  color: #fff;
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
+}
+#two{
+ 
+  background-color: #ecf1f1;
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
 }
 #three{
   color: #fff;
-  background-color: #a6367e;
+  background-color: #e8edec;
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
+}
+#four{
+    background-color: #dce3e2;
 }
 #search{
  display: inline;
@@ -225,7 +232,20 @@ body {
     vertical-align: baseline;
     box-sizing: border-box;
 }
-
+#sidebar+#wrapper {
+    margin-left: 18em;
+}
+.spotlights>section {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    min-height: 22.5em;
+}
 @media screen and (max-width: 1280px) {
     #wrapper {
         position: relative;
@@ -235,10 +255,17 @@ body {
         vertical-align: baseline;
         box-sizing: border-box;
     }
+     #sidebar+#wrapper {
+        margin-left: 0;
+        padding-top: 3.5em;
+    }
 }
 
 @media screen and (max-width: 736px) {
     #wrapper {
+        padding-top: 0;
+    }
+     #sidebar+#wrapper {
         padding-top: 0;
     }
 }

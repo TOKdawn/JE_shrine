@@ -27,9 +27,11 @@ export default{
 }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
+$--gradient-Y: #fff;
+$--gradient-X: #fff;
 #scrollbg{
-      z-index -1
+      z-index: -1;
 }
 #color {
       position: absolute;
@@ -39,7 +41,7 @@ export default{
       height: 100%;
       background-color: #e8edec;
       // background: linear-gradient(to bottom, #252525 0%, #386B76 100%);
-      background: linear-gradient(to bottom, #734b6d 0%, #4a148c 100%);
+      background: linear-gradient(to bottom, $--gradient-X 0%, $--gradient-Y 100%);
       background-attachment: fixed;
 }
 
@@ -68,12 +70,12 @@ export default{
 }
 
 #bg {
-      height 110%
+      height: 110%;
 
 }
 
 #bg img {
-      position absolute
+      position: absolute;
       list-style: none;
       display: block;
       opacity: 0.15;
@@ -198,7 +200,7 @@ export default{
 }
 
 #inner {
-      position relative
+      position: relative;
 }
 </style>
 

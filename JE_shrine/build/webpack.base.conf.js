@@ -18,7 +18,7 @@ module.exports = {
             config.build.assetsPublicPath : config.dev.assetsPublicPath
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json', '.css', 'styl'],
+        extensions: ['.js', '.vue', '.json', '.css', 'sass'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
@@ -26,6 +26,8 @@ module.exports = {
             'stylus': path.resolve(__dirname, '../src/common/stylus'),
             'js': path.resolve(__dirname, '../src/common/js'),
             'assets': path.resolve(__dirname, '../src/assets'),
+            'sass': path.resolve(__dirname, '../src/common/sass'),
+            'fonts': path.resolve(__dirname, '../src/common/fonts')
         }
     },
     module: {
@@ -71,10 +73,12 @@ module.exports = {
                     limit: 10000,
                     name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
-            },{
-                    test: /\.css$/,
-                    loader: 'style-loader!css-loader',
-          },
+            }
+            // 这个导入CSS的BUG哦.从开始写一直到现在都没解决,注释了就没问题,不写了CSSloder就报错
+            // {
+            //     test: /\.css$/,
+            //     loader: 'style-loader!css-loader'
+            // }
         ]
     },
     plugins: [
