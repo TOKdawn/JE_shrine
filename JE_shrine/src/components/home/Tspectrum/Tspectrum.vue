@@ -1,11 +1,16 @@
 <template>
   <div id="tspectrum">
     <h1>转谱器</h1>
-    <el-row type="flex" class="row-bg buttenBar" justify="space-around " :gutter="2">
-        <el-col :span="6" :offset="10" ><el-button type="primary">逐步转调</el-button></el-col>
-        <el-col :span="6" :offset="0"><el-button type="primary">直接转调</el-button></el-col>
-        <el-col :span="6" :offset="0"><el-button type="primary">双谱转换</el-button></el-col>
-    </el-row>
+    <el-container>
+
+      <el-header> 
+     <el-button-group class="buttenBar">
+  <el-button type="primary" >逐步转调</el-button>
+  <el-button type="primary" >直接转调</el-button>
+  <el-button type="primary" >双谱转换</el-button>
+      </el-button-group>
+    </el-header>
+</el-container>
     <router-view></router-view>
   </div>
 </template>
@@ -34,8 +39,8 @@ $--background-color:#ecf1f1;
 }
 .buttenBar{
   margin-top: 30px;
-  width: 71%;
   
+  text-align: center;
 }
       
 
