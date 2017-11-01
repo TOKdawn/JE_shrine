@@ -148,7 +148,7 @@ body {
 .home_img{
     position: absolute;
     top: 0px;
-    padding: 0 7em 0 7em;
+    padding: 0 8% 0 8%;
     width: 100%;
     text-align: center;
 }

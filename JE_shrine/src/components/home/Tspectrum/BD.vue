@@ -56,6 +56,7 @@
 #bdHead p{
     padding-top: 20px;
     color: #888;
+    font-size: 1.3em;
 }
 #bdHead {
     height: 100px !important;
