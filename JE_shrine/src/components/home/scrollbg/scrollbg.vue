@@ -28,8 +28,9 @@ export default{
 </script>
 
 <style lang="scss">
-$--gradient-Y: #fff;
-$--gradient-X: #fff;
+$--gradient-Y: #f1f8e9;
+$--gradient-X: #e1f5fe;
+
 #scrollbg{
       z-index: -1;
 }
@@ -71,10 +72,11 @@ $--gradient-X: #fff;
 
 #bg {
       height: 110%;
-
+      overflow: hidden;
 }
 
 #bg img {
+      overflow: hidden;
       position: absolute;
       list-style: none;
       display: block;
@@ -84,6 +86,10 @@ $--gradient-X: #fff;
       animation: square 45s infinite;
       -webkit-transition-timing-function: linear;
       transition-timing-function: linear;
+      border-right: 50px solid transparent;
+      left:-200px;
+      -webkit-filter: drop-shadow(200px 0px 0 #ffccbc);
+      filter: drop-shadow(200px 0px 0 #ffccbc);  
 }
 
 #bg img:nth-child(1) {

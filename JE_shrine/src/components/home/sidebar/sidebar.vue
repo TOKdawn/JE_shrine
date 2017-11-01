@@ -261,7 +261,7 @@ body.is-ie #sidebar>.inner {
   border: 0;
   color: rgba(255, 255, 255, 0.55);
   display: block;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: bold;
   letter-spacing: 0.25em;
   line-height: 1.75;
@@ -302,6 +302,9 @@ body.is-loading #sidebar nav ul li {
 }
 
 @media screen and (max-width: 1280px) {
+  .iconfont{
+    display: none;
+  }
   #sidebar nav a:before,
 #sidebar nav a:after {
   border-radius: 0.2em;
@@ -448,6 +451,9 @@ body.is-loading #sidebar nav ul li {
 }
 
 @media screen and (max-width:768px) {
+  .iconfont{
+    display: none;
+  }
   #contribute {
     background-color: $--element-pink;
     color: #eee;

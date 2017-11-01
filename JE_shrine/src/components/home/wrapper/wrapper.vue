@@ -2,15 +2,20 @@
     <div id="wrapper">
         <!-- Intro -->
         <section id="intro">
-             <scrollbg></scrollbg>
-            <div id="intro_inner">
-                <h1 id="intro_title">{{title}}</h1>
-                <div id="intro_infor">{{infor}}</div>
-            </div>
-            <div class="6u 12u$(xsmall) " id="search">
-                <input type="text" name="demo-name"  value="" placeholder="请输入曲谱名">
-                <div class="button">搜索</div>
-            </div>
+             <!-- <scrollbg></scrollbg> -->
+             <div class="home_img">
+                 <img :src="home_img" >
+              <div id="intro_inner">
+                    <h1 id="intro_title"><span class="special">MoeJE</span>☆自由神社</h1>
+                    <div id="intro_infor">{{infor}}</div>
+                </div>
+                <div id="search">
+                 <el-row :gutter="12" >
+                      <el-col :span="11"> <el-input  placeholder="请输入曲谱名"></el-input></el-col>
+                     <el-col :span="2"> <el-button type="primary" icon="el-icon-search" >搜索</el-button></el-col>
+                 </el-row>
+                </div>
+            </div>         
         </section>
         <!-- One -->
         <section id="one" class="wrapper style2 spotlights ">
@@ -73,7 +78,8 @@ export default {
         return {
             title: 'MoeJE☆自由神社',
             infor: 'JE吧曲库,自由神社,你要的谱子这里都有,',
-            donationSeller: {}
+            donationSeller: {},
+            home_img: require('./pic01.jpg')
         }
     },
     components: {
@@ -128,86 +134,82 @@ export default {
 
 
 <style lang='scss'>
+$--main-font-color: #888;
+$--special-font-color: #666;
+$--button-color:#8ebebc;
+$--classification-color: #f1f5f5;
+$--tspectrum-color: #ecf1f1;
+$--donation-color: #e8edec;
+$--about-color:#dce3e2;
 body {
     font-family: "微软雅黑","Helvetic", "SimHei", "Sans", "SimSun", "微软正黑体", "新细明体", "Arial";
 }
-#one{
-  background-color: #f5fafa;
-  color: #fff;
-  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
-}
-#two{
- 
-  background-color: #ecf1f1;
-  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
-}
-#three{
-  color: #fff;
-  background-color: #e8edec;
-  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
-}
-#four{
-    background-color: #dce3e2;
-}
-#search{
- display: inline;
- margin: -24vh auto 0 auto;
- /* vertical-align: top; */
- /* background-color: #aadcda; */
- font-size: auto;
-}
-#search div{
-    width: 20%;
-    padding: 0;
-    height: 2.75em;
-    font-size: 1em;
-    line-height: 2.75em;
-    letter-spacing:0.1em;
-    border-radius: 0em 0.25em 0.25em 0em;
-    float: left;
-    border-left: 0xp;
-}
-#search input{
-    background-color: rgba(255, 255, 255, .15);
-    color: #fff;
-    display: block;
-    float: left;
-    width: 77%;
-    border-radius: 0.25em 0em 0em 0.25em;
-    border-right: 0px;
-}
 
-#search input:hover {
-    border-right: 0px;
+.home_img{
+    position: absolute;
+    top: 0px;
+    padding: 0 7em 0 7em;
+    width: 100%;
+    text-align: center;
 }
-
-#search div:hover::after{
-    border-radius: 0.25em 0em 0em 0.25em;
-
-
+.home_img img{
+    max-height: 40%;
+    width: 100%;
 }
 #intro_inner {
     position: relative;
-    top: -39vh;
-    left: 0;
     width: auto;
     font-family: "微软正黑体", "新细明体", "Helvetic", "SimHei", "Sans", "SimSun", "Arial";
-    text-align: left;
-    padding-left: 5em;
+    color: $--main-font-color;
+    margin-top: 4em;
 }
-
+.special{
+    color:$--special-font-color;
+}
 #intro_inner h1 {
     font-family: inherit;
     font-size: 3em;
     margin: 0;
 }
-
 #intro_inner div {
+    margin-top: 2em;
     font-size: 1.25em;
-    color: #fff;
+    color: $--main-font-color;
+    line-height: 1.5em;
     /* background-color: #8c9eff; */
 }
-
+#search{
+ margin-top: 3em;
+ padding-left:30%;
+ font-size: auto;
+ text-align: center;
+}
+#search button{
+   background-color: $--button-color;
+   border-color: $--button-color;
+}
+#intro{
+    background-color: #fff;
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
+}
+#one{
+  background-color: $--classification-color;
+  color: #fff;
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
+}
+#two{
+ 
+  background-color: $--tspectrum-color;
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
+}
+#three{
+  color: #fff;
+  background-color: $--donation-color;
+  box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
+}
+#four{
+    background-color: $--about-color;
+}
 #intro {
     display: -moz-flex;
     display: -webkit-flex;

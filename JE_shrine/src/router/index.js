@@ -3,16 +3,26 @@ export default [{
     path: '/',
     component: App,
     children: [{
-        path: '',
-        component: r => require.ensure([], () => r(require('../components/home/home.vue')), 'home')
-    }
-    //   {
-    //     path: 'login',
-    //     component: r => require.ensure([], () => r(require('../components/log/login.Vue')), 'login')
-    // }, {
-    //     path: 'registered',
-    //     component: r => require.ensure([], () => r(require('../components/log/registered.Vue')), 'registered')
-    // }
+            path: '',
+            component: r => require.ensure([], () => r(require('../components/home/home.vue')), 'home'),
+            redirect: '/bd',
+            children: [{
+                path: 'bd',
+                component: r => require.ensure([], () => r(require('../components/home/Tspectrum/BD.vue')), 'bd')
+            }, {
+                path: 'step',
+                component: r => require.ensure([], () => r(require('../components/home/Tspectrum/stepModulation.vue')), 'step')
+            }, {
+                path: 'once',
+                component: r => require.ensure([], () => r(require('../components/home/Tspectrum/onceModulation.vue')), 'once')
+            }]
+        }
+        //   {
+        //     path: 'login',
+        //     component: r => require.ensure([], () => r(require('../components/log/login.Vue')), 'login')
+        // }, {
+        //     path: 'registered',
+        //     component: r => require.ensure([], () => r(require('../components/log/registered.Vue')), 'registered')
+        // }
     ]
 }]
-

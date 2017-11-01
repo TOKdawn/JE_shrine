@@ -5,7 +5,6 @@
              <p id="hello"> 路过的好人:<br/>
                &nbsp您好</p>
 
-
               MoeJE自由神社创建于2016年1月，我们长期致力于整合各类ACG乐谱，属于一个非营利性的网站。
 
               由于目前我们还在处于成长阶段，目前的开支费用完全由组织人员投入，但从长远来看这并不是合理的。
@@ -20,34 +19,46 @@
             </div>
           <ul>
           <li>帮助我们应付日益增长的服务器和带宽，以及前端开发、后端维护与编辑人员方面费用。</li>
-          <li>帮助我们支付高昂的域名费用。</li>
+          <li>帮助辛苦扒谱上传的</li>
           <li>帮助我们为自由神社做好风险措施，及时处理并修复可能出现的突发问题。</li>
+          <li>帮助我们支付高昂的域名费用。</li>
           <li> 为日后举办一些活动，发放福利等提供资助。</li>
-          <li style="color: #f48fb1"> ❤️&nbsp&nbsp我们非常感谢您的捐赠与支持，哪怕这份捐助微乎其微&nbsp❤️</li>
+          
+          <li style="color: #ec407a"> ❤️&nbsp&nbsp我们非常感谢您的捐赠与支持，哪怕这份捐助微乎其微&nbsp❤️</li>
           </ul>
           </div>
         </div>
-      <div>鸣谢名单:</div>
-        <div class="table-wrapper">
-          <table class="alt">
-            <thead >
-            <tr>
-              <th>序号</th>
-              <th>捐赠者</th>
-              <th>数目</th>
-              <th>时间</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="trem in donation.data">
-              <td>{{trem.num}}</td>
-              <td>{{trem.name}}</td>
-              <td>{{trem.money}}</td>
-              <td>{{trem.time}}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
+      <h1>鸣谢名单:</h1>
+        <el-table
+    :data="donation.data"
+    style="width: 100%; ">
+    <el-table-column
+      prop="num"
+      label="序号"
+      width="110">
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="姓名"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="money"
+      width="180"
+      label="金额">
+    </el-table-column>
+    <el-table-column
+      prop="time"
+      label="时间">
+    </el-table-column>
+  </el-table>
+ <div class="clear">
+    <el-button-group class="buttonBar">
+  <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+  <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+</el-button-group>
+ </div>
+  
     </div>
 </template>
 <script>
@@ -61,18 +72,19 @@
 
    }
 </script>
-<style lang="styl">
+<style lang="scss">
+$--main-font-color: #777;
+$--button-color: #8ebebc;
   #moreinfor{
     font-size: 14px;
   }
     #donation{
       text-align: left;
-      /*background: #a6367e;*/
-      /*background: #ad1457;*/
-
       width: 100%;
-      padding: 30px 90px 0px 90px;
-      font-size: 18px;
+      padding: 30px 8% 30px 8%;
+      font-size: 1.1em;
+      line-height: 1.3em;
+      color: $--main-font-color;
     }
     #donation img{
       right: 10px;
@@ -80,7 +92,6 @@
       height: 250px;
       display: inline-block;
       margin-top: 0px;
-
     }
     .left{
       float: left;
@@ -91,34 +102,43 @@
       display: block;
       clear: both;
       float: none;
-
     }
     #donation h1 {
-      color: #fff;
-      margin-bottom: 10px;
+      color: #555;
+      font-size: 2.5em;
+      margin: 40px 0px 50px 0px;
     }
     #donation ul{
       margin-top: 20px;
       line-height: 33px;
       width: auto;
       list-style:none;
-      color: #03a9f4;
+      color: #039be5;
     }
     #hello{
-      color: #aed581;
+      color: #8bc34a;
       text-align: left;
       font-size: 20px;
       margin-bottom: 10px;
     }
-  table.alt tbody tr td {
-    border-color: #c891b6;
+  .el-table{
+    background-color:#e8edec;
   }
-  table tbody tr:nth-child(2n + 1){
-    background: rgba(239,119,162,0.3);
+ .el-table tr{
+   background-color: #e8edec;
+ }
+
+  .el-table th.is-leaf, .el-table td {
+    border-color: #bbb;
   }
-  table th{
-    color: #c891b6;
-  }
+.cell{
+  padding-left: 10px !important;
+  
+}
+.buttonBar{
+  margin-top: 10px;
+  float: right;
+}
 
 
 </style>
