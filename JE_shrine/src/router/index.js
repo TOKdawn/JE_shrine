@@ -5,7 +5,7 @@ export default [{
     children: [{
             path: '',
             component: r => require.ensure([], () => r(require('../components/home/home.vue')), 'home'),
-            redirect: '/bd',
+            redirect: '/step',
             children: [{
                 path: 'bd',
                 component: r => require.ensure([], () => r(require('../components/home/Tspectrum/BD.vue')), 'bd')

@@ -5,9 +5,9 @@
 
       <el-header> 
      <el-button-group class="buttenBar">
-  <el-button type="primary" >逐步转调</el-button>
-  <el-button type="primary" >直接转调</el-button>
-  <el-button type="primary" >双谱转换</el-button>
+       <router-link to= "/step"><el-button type="primary" >逐步转调</el-button></router-link>
+       <router-link to= "/once"><el-button type="primary" >直接转调</el-button></router-link>
+       <router-link to= "/bd"> <el-button type="primary" >双谱转换</el-button></router-link>
       </el-button-group>
     </el-header>
 </el-container>
@@ -39,7 +39,6 @@ $--background-color:#ecf1f1;
 }
 .buttenBar{
   margin-top: 30px;
-  
   text-align: center;
 }
       

@@ -1,6 +1,5 @@
 <template>
- 
-  <el-container>
+  <el-container style="height: 770px;">
   <el-header id="bdHead"> 
       <h1>双谱转换</h1>
         <p>此功能用于简谱和半音阶口琴专用BD谱之间的转换
@@ -24,8 +23,6 @@
   v-model="output">
 </el-input>
       </el-col>
-
-
 </el-row >
   <div id="bdButton">
   <el-button>默认按钮</el-button>
@@ -48,7 +45,7 @@
       }
   }
 </script>
-<style>
+<style lang="scss">
 #bdHead h1{
     padding-top: 40px;
     font-size: 2em;
@@ -62,6 +59,6 @@
     height: 100px !important;
 }
 #bdButton{
-    padding-top: 30px
+    padding-top: 50px
 }
 </style>
