@@ -16,6 +16,9 @@ export default [{
                 path: 'once',
                 component: r => require.ensure([], () => r(require('../components/home/Tspectrum/onceModulation.vue')), 'once')
             }]
+        }, {
+            path: '/text',
+            component: r => require.ensure([], () => r(require('../components/text/index.vue')), 'text')
         }
         //   {
         //     path: 'login',

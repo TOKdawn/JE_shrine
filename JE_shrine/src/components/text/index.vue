@@ -1,12 +1,14 @@
 <template>
-  <div>
+  <div id="text">
+    <zheader></zheader>
     测试页面
     {{text}}
     vvv
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script>
   import store from '../../vuex/'
+  import zheader from '../header/header'
   export default{
     data() {
       return {
@@ -19,9 +21,20 @@
           console.log('cread')
         this.text = '用户未登录'
       }
+    },
+    components: {
+      zheader
     }
   }
 </script>
-<style>
-
+<style lang="scss">
+#text{
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 </style>

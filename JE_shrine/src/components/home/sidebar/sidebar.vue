@@ -113,38 +113,9 @@ section {
 
 .profilepic {
   display: block;
-  border: 5px solid #fff;
-  border-radius: 300px;
-  width: 14vh;
-  height: 14vh;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background: #88acdb;
-  -webkit-transition: all .2s ease-in;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  text-align: center;
-  cursor: pointer;
-}
 
-.profilepic {
-  display: block;
-  border: 5px solid #fff;
-  border-radius: 300px;
-  width: 10vh;
-  height: 10vh;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background: #88acdb;
-  -webkit-transition: all .2s ease-in;
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  text-align: center;
+
+
 }
 
 #sidebar {
@@ -394,6 +365,7 @@ body.is-loading #sidebar nav ul li {
     cursor: pointer;
     z-index: 10;
   }
+
   #sidebar {
     height: 3.5em;
     left: 0;
