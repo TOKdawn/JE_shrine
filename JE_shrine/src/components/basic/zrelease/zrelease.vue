@@ -1,6 +1,6 @@
 <template>
     <div>
-
+ rele显示
     </div>
 </template>
 <script type="text/ecmascript-6">

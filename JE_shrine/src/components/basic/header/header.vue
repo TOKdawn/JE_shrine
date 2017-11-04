@@ -1,6 +1,5 @@
 <template>
 <el-menu
-  :default-active="activeIndex2"
   :router = "true"
   class="el-menu-demo"
   mode="horizontal"
@@ -8,33 +7,29 @@
   background-color="#222729"
   text-color="#fff"
   active-text-color="#d95e76">
-
 <el-row :gutter="10">
   <el-col :xs="4" :sm="4" :md="6" :lg="6" :xl="6">logo</el-col>
   <el-col :xs="14" :sm="14" :md="12" :lg="12" :xl="12" >
-    <el-menu-item index="1" id="nav">主页</el-menu-item>
-    <el-menu-item index="4">Justyc_eternal</el-menu-item>
-  <el-submenu index="2">
+<el-row type="flex" class="row-bg" justify="center">
+  <el-col :span="24">
+    <el-menu-item index="/" id="nav">主页</el-menu-item>
+    <el-menu-item index="/">Justyc_eternal</el-menu-item>
+  <el-submenu index="/">
     <template slot="title">分类</template>
     <el-menu-item index="2-1">选项1</el-menu-item>
     <el-menu-item index="2-2">选项2</el-menu-item>
     <el-menu-item index="2-3">选项3</el-menu-item>
   </el-submenu>
-  <el-menu-item index="3">小工具</el-menu-item>
+  <el-menu-item index="/">小工具</el-menu-item>
+</el-col>
+</el-row>
   </el-col>
-  
   <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
-       <a href="http://www.baidu.com/" class="profilepic ">
-      <img :src=src  width="100%" height="100%">
+       <router-link to="/basic/loginbasic" class="profilepic2 "><img :src="src" width="100%" height="100%" /></router-link>
     </a>
-       <div id="contribute"> 投稿 </div>
+       <div id="zzcontribute"> 投稿 </div>
     </el-col>
 </el-row>
-
-  
-
-
-
 </el-menu>
 </template>
 <script type="text/ecmascript-6">
@@ -58,12 +53,12 @@ $--element-pink: #d95e76;
 #nav{
     background-color: #0a0;
 }
-  .profilepic {
+  .profilepic2 {
     display: block;
     border: 1px solid #fff;
     border-radius: 300px;
-    width: 3.3em;
-    height: 3.3em;
+    width: 56px;
+    height: 56px;
     margin: .1em;
     position: relative;
     overflow: hidden;
@@ -77,7 +72,7 @@ $--element-pink: #d95e76;
     float: right;
     right: 125px;
   }
-  #contribute {
+  #zzcontribute {
     background-color: $--element-pink;
     color: #eee;
     width: 80px;
@@ -92,7 +87,7 @@ $--element-pink: #d95e76;
     border-bottom-right-radius: 5px; 
     border-bottom-left-radius: 5px;
   }
-  #contribute::after {
+  #zzcontribute::after {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -105,7 +100,7 @@ $--element-pink: #d95e76;
     right: 0px;
   }
   
-  #contribute:hover::after {
+  #zzcontribute:hover::after {
     display: block;
   }
 </style>

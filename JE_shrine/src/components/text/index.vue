@@ -8,7 +8,7 @@
 </template>
 <script>
   import store from '../../vuex/'
-  import zheader from '../header/header'
+  import zheader from '../basic/header/header'
   export default{
     data() {
       return {

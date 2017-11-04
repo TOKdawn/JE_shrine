@@ -1,28 +1,29 @@
-<template>
-  <div id="sidebar">
-    <a href="http://www.baidu.com/" class="profilepic ">
-      <img :src=src  width="100%" height="100%">
-    </a>
-    <router-link to= "/text" class="center"><el-button plain style="margin-right:27%">登录/注册</el-button></router-link>
-    <div class="inner">
-      <nav>
-        <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active">
-          <ul>
 
-            <li v-for="item in items" :key="item.herf">
-              <a :href="item.href" class="scrollactive-item"><i :class="[iconfont,item.icon]"></i>{{item.text}}</a>
-            </li>
-          
-          </ul>
-        </scrollactive>
-      </nav>
-    </div>
-    <div id="contribute">
-      投稿
-    </div>
-  </div>
-</template>
-<script>
+  <template> 
+   <div id="sidebar"> 
+    <router-link to="/basic/loginbasic" class="profilepic "><img :src="src" width="100%" height="100%" /></router-link>
+    <router-link to="/basic/loginbasic" class="center">
+     <el-button plain="" style="margin-right:27%">
+      登录/注册
+     </el-button>
+    </router-link> 
+    <div class="inner"> 
+     <nav> 
+      <scrollactive ref="scrollactive" class="my-nav" :offset="0" active-class="active"> 
+       <ul> 
+        <li v-for="item in items" :key="item.herf"> <a :href="item.href" class="scrollactive-item"><i :class="[iconfont,item.icon]"></i>{{item.text}}</a> </li> 
+       </ul> 
+      </scrollactive> 
+     </nav> 
+    </div> 
+    <router-link to="/basic/zrelease">
+    <div  id="contribute">
+      投稿 
+    </div> 
+    </router-link>
+   </div> 
+  </template> 
+  <script>
 export default {
   data() {
     return {
@@ -56,9 +57,8 @@ export default {
     }
   }
 }
-</script>
-
-<style lang= "scss">
+</script> 
+  <style lang="scss">
 $--sidebar-background-color: #222729;
 $--element-blue: #b3e5fc;
 $--element-green: #f8bbd0;
@@ -86,6 +86,7 @@ section {
   line-height: 70px;
   transition: right 0.2s;
   cursor: pointer;
+  z-index: 3;
 }
 
 #contribute:hover {
@@ -113,10 +114,22 @@ section {
 
 .profilepic {
   display: block;
-
-
-
-}
+  border: 1px solid #fff;
+  border-radius: 300px;
+  width: 10vh;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #88acdb;
+  -webkit-transition: all .2s ease-in;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  text-align: center;
+  z-index: 3;
+  }
 
 #sidebar {
   padding: 5vh 0vh 0vh 0vh;
@@ -277,7 +290,7 @@ body.is-loading #sidebar nav ul li {
     display: none;
   }
   #sidebar nav a:before,
-#sidebar nav a:after {
+  #sidebar nav a:after {
   border-radius: 0.2em;
   bottom: 0;
   content: '';
@@ -285,13 +298,13 @@ body.is-loading #sidebar nav ul li {
   position: absolute;
   right: 0;
   width: 100%;
-}
+  }
 
-#sidebar nav a:before {
-  background: #41484c;
-}
+  #sidebar nav a:before {
+     background: #41484c;
+  }
 
-#sidebar nav a:after {
+  #sidebar nav a:after {
   background-image: -moz-linear-gradient(to right, $--element-blue, $--element-green);
   background-image: -webkit-linear-gradient(to right, $--element-blue, $--element-green);
   background-image: -ms-linear-gradient(to right, $--element-blue, $--element-green);
@@ -301,7 +314,7 @@ body.is-loading #sidebar nav ul li {
   -ms-transition: max-width 0.2s ease;
   transition: max-width 0.2s ease;
   max-width: 0;
-}
+  }
   #contribute {
     background-color: $--element-pink;
     color: #eee;
@@ -461,6 +474,7 @@ body.is-loading #sidebar nav ul li {
     text-align: center;
     float: right;
     right: 100px;
+     z-index: 3;
   }
 }
 
@@ -469,4 +483,4 @@ body.is-loading #sidebar nav ul li {
     display: none;
   }
 }
-</style>
+</style> 

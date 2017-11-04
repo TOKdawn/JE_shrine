@@ -16,16 +16,37 @@ export default [{
                 path: 'once',
                 component: r => require.ensure([], () => r(require('../components/home/Tspectrum/onceModulation.vue')), 'once')
             }]
-        }, {
+        },
+        {
+            path: '/basic',
+            component: r => require.ensure([], () => r(require('../components/basic/basic.vue')), 'basic'),
+            children: [{
+                //     path: '/retrieve', // 检索分页
+                //     component: r => require.ensure([], () => r(require('../components/basic/retrieve/retrieve.vue')), 'retrieve')
+                // }, {
+
+                // }, {
+                //     path: '/score', // 曲谱信息
+                //     component: r => require.ensure([], () => r(require('../components/basic/retrieve/score.vue')), 'scroe')
+                // }, {
+                path: 'zrelease',
+                component: r => require.ensure([], () => r(require('../components/basic/zrelease/zrelease.vue')), 'zrelease')
+            }, {
+                path: 'loginbasic',
+                component: r => require.ensure([], () => r(require('../components/basic/login/loginbasic.vue')), 'loginbasic'),
+                redirect: '/basic/loginbasic/login',
+                children: [{
+                    path: 'login', // 登录分页
+                    component: r => require.ensure([], () => r(require('../components/basic/login/login.vue')), 'login')
+                }, {
+                    path: 'registered', // 注册分页
+                    component: r => require.ensure([], () => r(require('../components/basic/login/registered.vue')), 'registered')
+                }]
+            }]
+        },
+        {
             path: '/text',
             component: r => require.ensure([], () => r(require('../components/text/index.vue')), 'text')
         }
-        //   {
-        //     path: 'login',
-        //     component: r => require.ensure([], () => r(require('../components/log/login.Vue')), 'login')
-        // }, {
-        //     path: 'registered',
-        //     component: r => require.ensure([], () => r(require('../components/log/registered.Vue')), 'registered')
-        // }
     ]
 }]
