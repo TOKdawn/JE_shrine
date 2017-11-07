@@ -53,6 +53,19 @@ $--element-pink: #d95e76;
 #nav{
     background-color: #0a0;
 }
+.el-menu-item{
+      font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing:3px
+}
+.el-submenu__title{
+    font-weight: bold;
+        text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing:3px
+}
+
   .profilepic2 {
     display: block;
     border: 1px solid #fff;

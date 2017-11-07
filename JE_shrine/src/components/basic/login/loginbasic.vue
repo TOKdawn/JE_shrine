@@ -3,7 +3,7 @@
       <div id="lgmainBody">
         <span class="logo">JE</span>
         <div id="lgtable">
-        <Tabs value="name1"  type="line" id="yexy"  @on-click="clickTab">
+        <Tabs value="login"  type="line" id="yexy"  @on-click="clickTab">
         <TabPane label="登录" name="login" ></TabPane>
         <TabPane label="注册" name="regist" ></TabPane>
         </Tabs>
@@ -28,7 +28,6 @@
               case 'regist':
                 this.$router.push({path: '/basic/loginbasic/registered'})
                 break
-
             }
           }
         }
