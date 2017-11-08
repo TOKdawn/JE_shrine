@@ -1,24 +1,27 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
-/* eslint-disable no-new */
+    /* eslint-disable no-new */
 const state = {
-  userdata: {
-    '_id': {
-      '$oid': ''
-    },
-    'email': '',
-    'passwordHash': '',
-    'role': 0,
-    'username': ''
-  }
+    userdata: {
+        '_id': {
+            '$oid': ''
+        },
+        'email': '',
+        'passwordHash': '',
+        'role': 0,
+        'username': ''
+    }
 }
 const mutations = {
-    increment (state) {
-
+    login(state) {
+        state.userdata.role = 10
+    },
+    logout(state) {
+        state.userdata.role = 0
     }
 }
 export default new Vuex.Store({
-  state,
-  mutations
+    state,
+    mutations
 })

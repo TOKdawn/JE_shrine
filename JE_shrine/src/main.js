@@ -21,7 +21,27 @@ Vue.use(Scrollactive)
 Vue.use(VueRouter)
 Vue.use(iView)
 const router = new VueRouter({
-        routes
+    routes
+})
+router.beforeEach((to, from, next) => {
+        if (to.meta.requireAuth) {
+            if (store.state.userdata.role === 0) {
+                console.log(store.state.userdata.role)
+                console.log('验证失败')
+                next({
+                    path: '/basic/loginbasic/login',
+                    query: {
+                        redirect: to.fullPath
+                    }
+                })
+            } else {
+                console.log(store.state.userdata.role)
+                console.log('验证成功')
+                next()
+            }
+        } else {
+            next()
+        }
     })
     /* eslint-disable no-new */
 new Vue({

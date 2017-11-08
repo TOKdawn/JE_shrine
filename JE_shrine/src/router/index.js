@@ -29,8 +29,11 @@ export default [{
                 //     path: '/score', // 曲谱信息
                 //     component: r => require.ensure([], () => r(require('../components/basic/retrieve/score.vue')), 'scroe')
                 // }, {
-                path: 'zrelease',
-                component: r => require.ensure([], () => r(require('../components/basic/zrelease/zrelease.vue')), 'zrelease')
+                path: 'zrelease', // 曲谱发布页
+                component: r => require.ensure([], () => r(require('../components/basic/zrelease/zrelease.vue')), 'zrelease'),
+                meta: {
+                    requireAuth: true
+                }
             }, {
                 path: 'loginbasic',
                 component: r => require.ensure([], () => r(require('../components/basic/login/loginbasic.vue')), 'loginbasic'),
