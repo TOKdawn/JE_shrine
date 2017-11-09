@@ -2,7 +2,7 @@
 ![alt](http://www.moeje.org/wp-content/uploads/2016/07/017.jpg)
 自由神社前端--[http://www.moeje.org/](http://www.moeje.org/)
 
-[后端部分](https://github.com/blackbbc/JE-Shrine-Server)
+后端部分--[https://github.com/blackbbc/JE-Shrine-Server](https://github.com/blackbbc/JE-Shrine-Server)
 
 ## 技术栈
 
