@@ -2,11 +2,11 @@
     <div>
       <Form ref="formInline" :model="formInline" :rules="ruleInline" inline id="logform">
         <FormItem prop="user">
-            <Input type="text" v-model="formInline.user" placeholder="Username">    
+            <Input type="text" v-model="formInline.user" placeholder="用户名">    
             </Input>
         </FormItem>
         <FormItem prop="password" id="loginform">
-            <Input type="password" v-model="formInline.password" placeholder="Password"> 
+            <Input type="password" v-model="formInline.password" placeholder="密码"> 
             </Input>
         </FormItem>
         <FormItem>

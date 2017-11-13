@@ -1,27 +1,17 @@
 <template>
   <div id="text">
     <zheader></zheader>
-    测试页面
-    {{text}}
-    vvv
   </div>
 </template>
 <script>
-  import store from '../../vuex/'
+  // import store from '../../vuex/'
   import zheader from '../basic/header/header'
   export default{
     data() {
       return {
         text: 'hh'
       }
-    },
-    created() {
-      console.log(store.state.userdata)
-        if (store.state.userdata.role === 0) {
-          console.log('cread')
-        this.text = '用户未登录'
-      }
-    },
+    }, 
     components: {
       zheader
     }
