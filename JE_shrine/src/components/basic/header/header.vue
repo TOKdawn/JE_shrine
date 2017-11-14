@@ -54,14 +54,14 @@ $--element-pink: #d95e76;
     background-color: #0a0;
 }
 .el-menu-item{
-      font-weight: bold;
+    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing:3px
 }
 .el-submenu__title{
     font-weight: bold;
-        text-decoration: none;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing:3px
 }
@@ -93,7 +93,7 @@ $--element-pink: #d95e76;
     position: absolute;
     bottom: -10px;
     right: 15px;
-    font-size: 1.5em;
+    font-size: 25px;
     text-align: center;
     line-height: 70px;
     transition: right 0.2s;

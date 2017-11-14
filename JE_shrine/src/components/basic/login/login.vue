@@ -16,9 +16,7 @@
     <div class="logBar">
         <a>忘记密码·</a><a @click="changeicoflag()">社交账户登录</a>
         <div id="logicon" :class="{icomove:icoflag}">
-            <i class="iconfont icon-baidu"></i>
-            <i class="iconfont icon-qq"></i>
-            <i class="iconfont icon-xinlang"></i>
+            <i class="ziconfont icon-baidu"></i><i class="ziconfont icon-qq"></i><i class="ziconfont icon-xinlang"></i>
         </div>
     </div>
     </div>
@@ -64,7 +62,7 @@ import store from '@/vuex/index.js'
     }
 </script>
 <style lang="scss">
-$--login-width: 235px;
+$--login-width: 256px;
 @keyframes icomove {
       0% {
             -webkit-transform: translate(-5px,0);
@@ -78,7 +76,12 @@ $--login-width: 235px;
             clear: rgba(188,188,188,.8);
       }
 }
-
+.ziconfont {
+        font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
 #loginform div input {
     width: $--login-width;
 }
@@ -114,7 +117,7 @@ $--login-width: 235px;
     line-height: 24px;
     vertical-align: top;
     color: #888;
-    letter-spacing:1px
+    letter-spacing:3px
 
 }
 .icomove {

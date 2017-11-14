@@ -21,6 +21,9 @@ export default [{
             path: '/basic',
             component: r => require.ensure([], () => r(require('../components/basic/basic.vue')), 'basic'),
             children: [{
+                path: '/agreement',
+                component: r => require.ensure([], () => r(require('../components/basic/agreement/agreement.vue')), 'agreement')
+            }, {
                 //     path: '/retrieve', // 检索分页
                 //     component: r => require.ensure([], () => r(require('../components/basic/retrieve/retrieve.vue')), 'retrieve')
                 // }, {

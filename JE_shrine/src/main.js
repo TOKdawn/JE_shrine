@@ -8,6 +8,7 @@ import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
 import iView from 'iview'
 import axios from 'axios'
+import VueValidator from 'vue-validator'
 import 'iview/dist/styles/iview.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'sass/element-variables.sass'
@@ -15,6 +16,7 @@ import 'fonts/iconfont.css'
 import store from './vuex/'
 Vue.config.productionTip = false
 Vue.prototype.$ajax = axios
+Vue.use(VueValidator)
 Vue.use(Vuex)
 Vue.use(ElementUI)
 Vue.use(Scrollactive)
