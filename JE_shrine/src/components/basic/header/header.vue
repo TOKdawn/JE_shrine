@@ -16,9 +16,9 @@
     <el-menu-item index="/">Justyc_eternal</el-menu-item>
   <el-submenu index="/">
     <template slot="title">分类</template>
-    <el-menu-item index="2-1">选项1</el-menu-item>
-    <el-menu-item index="2-2">选项2</el-menu-item>
-    <el-menu-item index="2-3">选项3</el-menu-item>
+    <el-menu-item index="2-1">新番曲谱</el-menu-item>
+    <el-menu-item index="2-2">热门标签</el-menu-item>
+    <el-menu-item index="2-3">搜索热榜</el-menu-item>
   </el-submenu>
   <el-menu-item index="/">小工具</el-menu-item>
 </el-col>

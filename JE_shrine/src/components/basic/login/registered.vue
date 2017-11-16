@@ -1,5 +1,4 @@
 <template>
-  
          <Form ref="registeredData" :model="registeredData" :rules="ruleInline" inline id="registeredform">
         <FormItem prop="user">
             <Input type="text" v-model="registeredData.user" placeholder="用户名">
@@ -14,8 +13,13 @@
             </Input>
         </FormItem>
         <FormItem prop="mail">
-            <Input type="text" v-model="registeredData.mail" placeholder="邮箱">
-            </Input>
+         <AutoComplete
+        v-model="registeredData.mail"
+        @on-search="inputmail"
+        placeholder="邮箱"
+        >
+        <Option v-for="item in tenp" :value="item" :key="item" >{{ item }}</Option>
+        </AutoComplete>
         </FormItem>
         <FormItem >
             <div id="verification">
@@ -29,13 +33,13 @@
         </FormItem>
         <p>点击「注册」按钮，即代表你同意<router-link to="/basic/loginbasic/agreement">《用户协议》</router-link></p>
     </Form> 
-
 </template>
 <script type="text/ecmascript-6">
  export default {
         data () {
             return {
                 versrc: require('./aer.png'),
+                tenp: [],
                 registeredData: {
                     user: '',
                     password: '',
@@ -73,12 +77,24 @@
                         this.$Message.error('Fail!') 
                     }
                 })
+            }, 
+            inputmail (value) {
+                this.tenp = !value || value.indexOf('@') >= 0 ? [] : [
+                    value + '@qq.com',
+                    value + '@sina.com',
+                    value + '@163.com',
+                    value + '@gmail.com' 
+                ]
             }
         }
+       
     }
 </script>
 <style lang="scss">
 $--login-width: 256px;
+.ivu-select-dropdown ul li{
+    font-size: 15px;
+}
 #registeredform div input {
     width: $--login-width;
 }

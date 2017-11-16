@@ -16,6 +16,7 @@ const state = {
 const mutations = {
     login(state) {
         state.userdata.role = 10
+        state.userdata.username = 'dawn'
     },
     logout(state) {
         state.userdata.role = 0

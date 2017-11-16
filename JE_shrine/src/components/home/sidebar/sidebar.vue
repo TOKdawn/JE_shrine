@@ -1,7 +1,12 @@
 
   <template> 
    <div id="sidebar"> 
-    <router-link to="/basic/loginbasic" class="profilepic "><img :src="src" width="100%" height="100%" /></router-link>
+     
+    
+    <router-link to="/basic/loginbasic" class="profilepic">
+    <img :src="src" width="100%" height="100%" />
+    </router-link>
+    
     <router-link to="/basic/loginbasic" class="center">
      <el-button plain="" style="margin-right:27%">
       登录/注册
@@ -72,6 +77,9 @@ section {
   position: absolute;
   margin-top: -.3em;
   left:20px;
+}
+.ivu-tooltip{
+  display: block;
 }
 #contribute {
   background-color: $--element-pink;

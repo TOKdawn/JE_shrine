@@ -19,34 +19,7 @@
         </section>
         <!-- One -->
         <section id="one" class="wrapper style2 spotlights ">
-            <section>
-                <a href="#" class="image"><img src="" alt="" data-position="center center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Sed ipsum dolor</h2>
-                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-                        <ul class="actions">
-                            <li>
-                                <a href="#" class="button">Learn more</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <a href="#" class="image"><img src="" alt="" data-position="top center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Feugiat consequat</h2>
-                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-                        <ul class="actions">
-                            <li>
-                                <a href="#" class="button">Learn more</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        <classification></classification>
         </section>
 
         <!-- Two -->
@@ -58,7 +31,6 @@
         <section id="three" class="wrapper  fade-up ">
             <donation :donation="donationSeller" ></donation>
         </section>
-
         <section id="four" class="wrapper  fade-up ">
            <about></about>
         </section>
@@ -73,6 +45,7 @@ import scrollbg from 'components/home/scrollbg/scrollbg.vue'
 import tspectrum from 'components/home/Tspectrum/Tspectrum.vue'
 import donation from 'components/home/donation/donation.vue'
 import about from 'components/home/about/about.vue'
+import classification from 'components/home/classification/classification.vue'
 export default {
     data() {
         return {
@@ -86,7 +59,8 @@ export default {
         scrollbg,
         tspectrum,
         donation,
-        about
+        about,
+        classification
     },
   created() {
         // this.$http.get('../src/assets/donation.json').then(response => {
