@@ -34,7 +34,11 @@
         <section id="four" class="wrapper  fade-up ">
            <about></about>
         </section>
-
+        <footer class="footer">
+            <div>
+                Copyright ©2017 <a href="//www.moeje.org">www.moeje.org</a> Powered By <a href="//github.com/TOKdawn">DawninShadow</a> Version 1.0.0 
+            </div>
+        </footer>
     </div>
 </template>
 
@@ -118,7 +122,16 @@ $--about-color:#dce3e2;
 body {
     font-family: "微软雅黑","Helvetic", "SimHei", "Sans", "SimSun", "微软正黑体", "新细明体", "Arial";
 }
-
+.footer{
+    background: #acb3b2;
+    line-height: 1.5em;
+    font-size:.8em;
+    padding: 3px;
+    color: #888;
+}
+.footer a{
+    color:#999;
+}
 .home_img{
     position: absolute;
     top: 0px;

@@ -11,46 +11,6 @@
                                 <!-- Gallery One pop up connected with JS code below -->
                                 <div class="grid-item">
                                     <figure class="effect-sadie">
-                                        <img src="./img/tm-img-01-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>One</strong></span></h2>
-                                            <p class="tm-figure-description">Set true or false in HTML script tag for this page black and white.</p>
-                                            <a href="./img/tm-img-01.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-02-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Two</strong></span></h2>
-                                            <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                            <a href="./img/tm-img-02.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-03-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Three</strong></span></h2>
-                                            <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="./img/tm-img-03.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-04-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Four</strong></span></h2>
-                                            <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                            <a href="./img/tm-img-04.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
                                         <img src="./img/tm-img-05-tn.jpg" alt="Image" class="img-fluid tm-img">
                                         <figcaption>
                                             <h2 class="tm-figure-title">Image <span><strong>Five</strong></span></h2>
@@ -210,7 +170,6 @@ body {
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
 
-    background-color: #f2f2f2;
 }
 
 a {
@@ -463,11 +422,10 @@ html.gray #loader-wrapper {
 }
 
 body {
-    background-color: #DDDDDD;
     color: black;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 400;
     overflow-x: hidden;
 }
 
