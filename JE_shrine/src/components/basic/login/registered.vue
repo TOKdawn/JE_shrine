@@ -27,11 +27,12 @@
             </Input>
             <img :src="versrc">
             </div>
+            <a class="changever">看不清,点我换一张</a>
         </FormItem>
         <FormItem>
             <Button type="primary" @click="handleSubmit('formInline')" id="registeredButten">注册</Button>
         </FormItem>
-        <p>点击「注册」按钮，即代表你同意<router-link to="/basic/loginbasic/agreement">《用户协议》</router-link></p>
+        <p id="useragreement">点击「注册」按钮，即代表你同意<router-link to="/basic/loginbasic/agreement">《用户协议》</router-link></p>
     </Form> 
 </template>
 <script type="text/ecmascript-6">
@@ -86,12 +87,24 @@
                     value + '@gmail.com' 
                 ]
             }
+        },
+        mounted() {
+            this.$axios.post('101.225.229.78:5000/api/captcha').then(Response => {
+                this.versrc = Response
+            })
         }
        
     }
 </script>
 <style lang="scss">
 $--login-width: 256px;
+.changever{
+    font-size: 5px;
+    position: absolute;
+    margin-top:-32px;
+    margin-left: 3px;
+    display: block;
+}
 .ivu-select-dropdown ul li{
     font-size: 15px;
 }
@@ -100,6 +113,7 @@ $--login-width: 256px;
 }
 #registeredform p{
     color:#666;
+    font-size: 15px;
 }
 #registeredform p a{
     color: #698ebf;

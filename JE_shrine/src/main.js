@@ -15,7 +15,7 @@ import 'sass/element-variables.sass'
 import 'fonts/iconfont.css'
 import store from './vuex/'
 Vue.config.productionTip = false
-Vue.prototype.$ajax = axios
+Vue.prototype.$axios = axios
 Vue.use(VueValidator)
 Vue.use(Vuex)
 Vue.use(ElementUI)
