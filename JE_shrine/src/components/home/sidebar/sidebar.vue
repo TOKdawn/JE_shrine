@@ -2,7 +2,10 @@
   <template> 
    <div id="sidebar"> 
     <router-link to="/basic/loginbasic" class="profilepic">
-    <img :src="src" width="100%" height="100%" />
+    <el-tooltip placement="top">
+       <img :src="src" width="100%" height="100%" />
+  <div slot="content" :class="{displayNone:isLogin}" id="cancellationBar">收藏夹<br/>注销</div>
+</el-tooltip>
     </router-link>
     <router-link to="/basic/loginbasic" class="center">
      <el-button plain="" style="margin-right:27%">
@@ -26,10 +29,12 @@
    </div> 
   </template> 
   <script>
+  import store from '@/vuex/index.js'
 export default {
   data() {
     return {
       src: require('./img/Akkarin.jpg'),
+      isLogin: true,
       iconfont: 'iconfont',
       items: [{
         href: '#intro',
@@ -57,6 +62,11 @@ export default {
       }]
 
     }
+  },
+  mounted() {
+    if (store.state.userdata.role !== 0){
+      this.isLogin = false
+    }
   }
 }
 </script> 
@@ -65,6 +75,15 @@ $--sidebar-background-color: #222729;
 $--element-blue: #b3e5fc;
 $--element-green: #f8bbd0;
 $--element-pink: #d95e76;
+#cancellationBar{
+  font-size: 15px;
+  line-height: 28px;
+  padding: 5px;
+  cursor:pointer;
+}
+.displayNone{
+  display: none;
+}
 section {
   margin: 0;
   padding: 0;
@@ -290,7 +309,10 @@ body.is-loading #sidebar nav ul li {
   opacity: 0;
 }
 
+
+
 @media screen and (max-width: 1280px) {
+
   .iconfont{
     display: none;
   }
@@ -441,6 +463,7 @@ body.is-loading #sidebar nav ul li {
 }
 
 @media screen and (max-width:768px) {
+
   .iconfont{
     display: none;
   }
@@ -484,6 +507,7 @@ body.is-loading #sidebar nav ul li {
 }
 
 @media screen and (max-width: 736px) {
+
   #sidebar {
     display: none;
   }

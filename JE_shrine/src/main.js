@@ -15,6 +15,7 @@ import 'sass/element-variables.sass'
 import 'fonts/iconfont.css'
 import store from './vuex/'
 Vue.config.productionTip = false
+axios.defaults.baseURL = '101.225.229.78:5000'
 Vue.prototype.$axios = axios
 Vue.use(VueValidator)
 Vue.use(Vuex)
