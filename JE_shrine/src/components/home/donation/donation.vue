@@ -30,7 +30,7 @@
         </div>
       <h1>鸣谢名单:</h1>
         <el-table
-    :data="donation.data"
+    :data="donation.donationData"
     style="width: 100%; ">
     <el-table-column
       prop="num"
