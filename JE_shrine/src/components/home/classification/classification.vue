@@ -9,126 +9,26 @@
                         <div class="tm-img-gallery-container">
                             <div class="tm-img-gallery gallery-one">
                                 <!-- Gallery One pop up connected with JS code below -->
-                                <div class="grid-item">
+                                
+                                
+                              
+                                <div v-for="tiem in classIficationData" :key="tiem.name" class="grid-item">
                                     <figure class="effect-sadie">
-                                        <img src="./img/tm-img-05-tn.jpg" alt="Image" class="img-fluid tm-img">
+                                        <img :src="tiem.img" alt="Image" class="img-fluid tm-img">
                                         <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Five</strong></span></h2>
-                                            <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="./img/tm-img-05.jpg">View more</a>
+                                            <h2 class="tm-figure-title">{{tiem.name}}</h2>
+                                            <p class="tm-figure-description">{{tiem.describe}}</p>
+                                            <a :href="tiem.herf">View more</a>
                                         </figcaption>
                                     </figure>
+
                                 </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-06-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Six</strong></span></h2>
-                                            <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                            <a href="./img/tm-img-06.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-07-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Seven</strong></span></h2>
-                                            <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="./img/tm-img-07.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-08-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Eight</strong></span></h2>
-                                            <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                            <a href="./img/tm-img-08.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-09-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Nine</strong></span></h2>
-                                            <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="./img/tm-img-09.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-10-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Ten</strong></span></h2>
-                                            <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                            <a href="./img/tm-img-10.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-11-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Eleven</strong></span></h2>
-                                            <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="./img/tm-img-11.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-12-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Twelve</strong></span></h2>
-                                            <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                            <a href="./img/tm-img-12.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-13-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Thirteen</strong></span></h2>
-                                            <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="./img/tm-img-13.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-14-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Fourteen</strong></span></h2>
-                                            <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                            <a href="./img/tm-img-14.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-15-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Fifteen</strong></span></h2>
-                                            <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="./img/tm-img-15.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item">
-                                    <figure class="effect-sadie">
-                                        <img src="./img/tm-img-16-tn.jpg" alt="Image" class="img-fluid tm-img">
-                                        <figcaption>
-                                            <h2 class="tm-figure-title">Image <span><strong>Sixteen</strong></span></h2>
-                                            <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                            <a href="./img/tm-img-16.jpg">View more</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+
+
+
+                               
+                               
+                              
                             </div>
                         </div>
                     </div>
@@ -142,7 +42,81 @@
     </div>
 </template>
 <script>
+/* eslint-disable no-new */
 export default {
+    data() {
+        return {
+            classIficationData: [
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                    img: require('./img/tm-img-01-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-02-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-03-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-04-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-05-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-06-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-07-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-08-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-09-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-10-tn.jpg')
+                },
+                {
+                    name: '最新发布',
+                    herf: '//www.baidu.com',
+                    describe: '看看大佬们又扒什么谱子了',
+                     img: require('./img/tm-img-11-tn.jpg')
+                }
+
+            ]
+        }
+    }
   
 }
 </script>

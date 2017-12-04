@@ -33,7 +33,7 @@ module.exports = {
         'space-before-blocks': 0,
         'no-trailing-spaces': 0,
         'no-unused-vars ': 0,
-      'Strings must use singlequote ': 0
-
+        'Strings must use singlequote ': 0,
+        'Extra semicolon': 0,
     }
 }
