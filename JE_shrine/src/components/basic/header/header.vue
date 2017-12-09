@@ -65,6 +65,9 @@ $--element-pink: #d95e76;
     text-transform: uppercase;
     letter-spacing:3px
 }
+.el-menu-demo{
+  border: 0px !important;
+}
 
   .profilepic2 {
     display: block;

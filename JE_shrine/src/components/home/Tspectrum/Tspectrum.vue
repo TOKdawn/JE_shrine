@@ -2,7 +2,6 @@
   <div id="tspectrum">
     <h1>转谱器</h1>
     <el-container>
-
       <el-header> 
      <el-button-group class="buttenBar">
        <router-link to= "/step"><el-button type="primary" >逐步转调</el-button></router-link>

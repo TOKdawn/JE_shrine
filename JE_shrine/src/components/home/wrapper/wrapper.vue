@@ -9,19 +9,7 @@
                     <h1 id="intro_title"><span class="special">MoeJE</span>☆自由神社</h1>
                     <div id="intro_infor">{{infor}}</div>
                 </div>
-                <div id="search">
-                 <el-row :gutter="12" >
-                      <el-col :span="11"> <el-autocomplete
-                                        v-model="state4"
-                                        :fetch-suggestions="querySearchAsync"
-                                         placeholder="请输入曲谱名或标签"
-                                         @select="handleSelect"
-                                         style="width:100%"
-                                         ></el-autocomplete>
-                     </el-col>
-                    <el-col :span="2"> <el-button type="primary" icon="el-icon-search" @click = "searchKeyword">搜索</el-button></el-col>
-                 </el-row>
-                </div>
+                <search></search>
             </div>         
         </section>
         <!-- One -->
@@ -57,6 +45,7 @@ import tspectrum from 'components/home/Tspectrum/Tspectrum.vue'
 import donation from 'components/home/donation/donation.vue'
 import about from 'components/home/about/about.vue'
 import classification from 'components/home/classification/classification.vue'
+import search from 'components/home/search/search.vue'
 export default {
     data() {
         return {
@@ -89,34 +78,12 @@ export default {
         tspectrum,
         donation,
         about,
-        classification
+        classification,
+        search
     },
-    methods :{
-        searchKeyword(){
-            var goSrc = '/retrieve/:'+this.state4
-            if(this.state4 != '')
-            this.$router.push({name: 'retrieve', params: { keyword:this.state4}})
-        },
-       
-      querySearchAsync(queryString, cb) { // cd是回调函数
-        var restaurants = this.restaurants;
-        var results = queryString ? restaurants.filter(this.createStateFilter(queryString)) : restaurants;
-        clearTimeout(this.timeout);
-        this.timeout = setTimeout(() => {
-          cb(results);
-        }, 500);
-      },
-      createStateFilter(queryString) {
-        return (state) => {
-          return (state.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
-        };
-      },
-      handleSelect(item) {
-        console.log(item);
-      },
-    },
+  
   created() {
-       this.restaurants = this.keyWordList
+     
 
         let _this = this;
         this.$axios.get('/GET/donationSeller/').then(
@@ -186,16 +153,7 @@ body {
     line-height: 1.5em;
     /* background-color: #8c9eff; */
 }
-#search{
- margin-top: 2em;
- padding-left:30%;
- font-size: auto;
- text-align: center;
-}
-#search button{
-   background-color: $--button-color;
-   border-color: $--button-color;
-}
+
 #intro{
     background-color: #fff;
     box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
@@ -234,7 +192,10 @@ body {
     min-height: 100vh;
     position: relative;
 }
-
+#search button{
+   background-color: $--button-color;
+   border-color: $--button-color;
+}
 #wrapper {
     position: relative;
     margin-left: 23em;

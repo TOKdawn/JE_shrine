@@ -24,7 +24,6 @@
       </el-col>
 </el-row >
      <div id="bdButton">
-
    <span class="shuoming">转换前1=</span>
    <el-select v-model="selected1" placeholder="C" class="selectcss">
      <el-option

@@ -41,6 +41,10 @@ export default [{
                     path: '/retrieve/:keyword',
                     name: 'retrieve',
                     component: r => require.ensure([], () => r(require('../components/basic/retrieve/retrieve.vue')), 'retrieve')
+                }, {
+                    path: '/score/:scorename',
+                    name: 'score',
+                    component: r => require.ensure([], () => r(require('../components/basic/retrieve/score.vue')), 'score')
                 },
                 {
                     path: 'loginbasic',
