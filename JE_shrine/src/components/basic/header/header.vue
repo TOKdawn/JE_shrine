@@ -67,6 +67,7 @@ $--element-pink: #d95e76;
 }
 .el-menu-demo{
   border: 0px !important;
+   min-width: 840px;
 }
 
   .profilepic2 {

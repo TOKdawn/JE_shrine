@@ -72,7 +72,7 @@
 
    }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 $--main-font-color: #777;
 $--button-color: #8ebebc;
   #moreinfor{

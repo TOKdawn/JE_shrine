@@ -122,7 +122,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 #classification{
     width: 100%;
     display: block;

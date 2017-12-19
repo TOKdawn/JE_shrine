@@ -67,7 +67,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 #search{
  margin-top: 2em;
  padding-left:30%;

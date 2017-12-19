@@ -100,7 +100,7 @@ export default {
 </script>
 
 
-<style lang='scss'>
+<style lang='scss' scoped>
 $--main-font-color: #888;
 $--special-font-color: #666;
 $--button-color:#8ebebc;
