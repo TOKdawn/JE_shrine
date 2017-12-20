@@ -44,19 +44,21 @@ import store from '@/vuex/index.js'
         },
         methods: {
             handleSubmit(name) {
-                store.commit('login')
-                console.log('登录成功')
-                this.$refs[name].validate((valid) => {
-                    if (valid) {
-                        this.$Message.success('Success!')
-                    } else {
-                        this.$Message.error('Fail!')
+                this.$axios.post('/user/login',{
+                    loginEmail: this.formInline.user,
+                    loginPsd: this.formInline.password
+                }
+
+                ).then(function (response){
+                    console.log(response.msg)
+                    var userData={
+                        'role':10,
+                        'name':response.name
                     }
+                    store.commit('login',userData)
+                }).catch(function(error){
+                    console.log("请求失败")
                 })
-            },
-            changeicoflag() {
-                this.icoflag = !this.icoflag
-                console.log(this.icoflag)
             }
         }
     }

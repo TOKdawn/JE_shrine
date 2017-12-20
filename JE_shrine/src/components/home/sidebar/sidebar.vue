@@ -70,6 +70,7 @@ export default {
   }
 }
 </script> 
+
   <style lang="scss" scoped>
 $--sidebar-background-color: #222729;
 $--element-blue: #b3e5fc;

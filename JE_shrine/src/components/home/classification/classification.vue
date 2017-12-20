@@ -126,7 +126,6 @@ export default {
 #classification{
     width: 100%;
     display: block;
-   
 } 
 *,
 *::after,
