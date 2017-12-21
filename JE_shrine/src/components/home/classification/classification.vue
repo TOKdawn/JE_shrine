@@ -135,15 +135,9 @@ export default {
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
 
-body {
-    font-size: 1.6rem;
-    font-family: "Open Sans", sans-serif;
 
-}
+
 
 a {
     color: #d44457;
@@ -613,7 +607,7 @@ figure.effect-sadie figcaption::before {
 
 figure.effect-sadie h2 {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 0;
@@ -706,7 +700,7 @@ figure.effect-sadie:hover p {
 
 .cd-hero-slider .selected .cd-full-width p.tm-figure-description {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     padding: 2em;
     opacity: 0;
