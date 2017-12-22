@@ -1,0 +1,26 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^1.0.3",
+        "body-parser": "~1.17.1",
+        "connect-mongo": "^2.0.0",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.3",
+        "express": "~4.15.2",
+        "express-session": "^1.15.6",
+        "jade": "~1.11.0",
+        "mongoose": "^4.13.3",
+        "morgan": "~1.8.1",
+        "serve-favicon": "~2.4.2",
+        "sha1": "^1.1.1",
+        "uuid": "^3.1.0"
+    }
+}
