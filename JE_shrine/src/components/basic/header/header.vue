@@ -12,7 +12,7 @@
   <el-col :xs="14" :sm="14" :md="12" :lg="12" :xl="12" >
 <el-row type="flex" class="row-bg" justify="center">
   <el-col :span="24">
-    <el-menu-item index="/" id="nav">主页</el-menu-item>
+    <el-menu-item index="/home" id="nav">主页</el-menu-item>
     <el-menu-item index="/">Justyc_eternal</el-menu-item>
   <el-submenu index="/">
     <template slot="title">分类</template>

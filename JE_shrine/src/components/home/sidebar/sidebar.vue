@@ -1,15 +1,14 @@
-
-  <template> 
+<template> 
    <div id="sidebar"> 
     <router-link to="/basic/loginbasic" class="profilepic">
     <el-tooltip placement="top">
        <img :src="src" width="100%" height="100%" />
-  <div slot="content" :class="{displayNone:isLogin}" id="cancellationBar">收藏夹<br/>注销</div>
+  <div slot="content" :class="{displayNone:isLogin}" id="cancellationBar">收藏夹<br/><p class="sginout">注销</p></div>
 </el-tooltip>
     </router-link>
     <router-link to="/basic/loginbasic" class="center">
-     <el-button plain="" style="margin-right:27%">
-      登录/注册
+     <el-button id="name_butten">
+      {{name}}
      </el-button>
     </router-link> 
     <div class="inner"> 
@@ -27,48 +26,55 @@
     </div> 
     </router-link>
    </div> 
-  </template> 
-  <script>
-  import store from '@/vuex/index.js'
+</template> 
+<script>
+import store from "@/vuex/index.js";
+
 export default {
   data() {
     return {
-      src: require('./img/Akkarin.jpg'),
+      src: require("./img/Akkarin.jpg"),
       isLogin: true,
-      iconfont: 'iconfont',
-      items: [{
-        href: '#intro',
-        text: '主页',
-        icon: 'icon-zhuye'
-      }, {
-        href: '#one',
-        text: '分类',
-        icon: 'icon-leimupinleifenleileibie'
-
-      }, {
-        href: '#two',
-        text: '小工具',
-        icon: 'icon-gongju-copy'
-
-      }, {
-        href: '#three',
-        text: '鸣谢/捐赠',
-        icon: 'icon-aixinjuanzeng'
-
-      }, {
-        href: '#four',
-        text: '关于我们',
-        icon: 'icon-guanyu'
-      }]
-
-    }
+      iconfont: "iconfont",
+      name: "登录/注册",
+      items: [
+        {
+          href: "#intro",
+          text: "主页",
+          icon: "icon-zhuye"
+        },
+        {
+          href: "#one",
+          text: "分类",
+          icon: "icon-leimupinleifenleileibie"
+        },
+        {
+          href: "#two",
+          text: "小工具",
+          icon: "icon-gongju-copy"
+        },
+        {
+          href: "#three",
+          text: "鸣谢/捐赠",
+          icon: "icon-aixinjuanzeng"
+        },
+        {
+          href: "#four",
+          text: "关于我们",
+          icon: "icon-guanyu"
+        }
+      ]
+    };
   },
-  mounted() {
-    if (store.state.userdata.role !== 0){
-      this.isLogin = false
+  created() {
+    if (store.state.userdata.role !== 0) {
+      this.isLogin = false;
+      this.name = store.state.userdata.username;
+      this.src = require('./img/user.jpg')
+      console.log('用户名:' , store.state.userdata)
     }
   }
-}
+};
 </script> 
 
   <style lang="scss" scoped>
@@ -76,26 +82,35 @@ $--sidebar-background-color: #222729;
 $--element-blue: #b3e5fc;
 $--element-green: #f8bbd0;
 $--element-pink: #d95e76;
-#cancellationBar{
+.sginout:hover{
+  background-color: #495060;
+}
+#name_butten{
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: block;
+}
+#cancellationBar {
   font-size: 15px;
   line-height: 28px;
   padding: 5px;
-  cursor:pointer;
+  cursor: pointer;
 }
-.displayNone{
+.displayNone {
   display: none;
 }
 section {
   margin: 0;
   padding: 0;
 }
-.iconfont{
+.iconfont {
   font-size: 1.6em;
   position: absolute;
-  margin-top: -.3em;
-  left:20px;
+  margin-top: -0.3em;
+  left: 20px;
 }
-.ivu-tooltip{
+.ivu-tooltip {
   display: block;
 }
 #contribute {
@@ -147,18 +162,18 @@ section {
   position: relative;
   overflow: hidden;
   background: #88acdb;
-  -webkit-transition: all .2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
   -webkit-box-align: center;
   text-align: center;
   z-index: 3;
-  }
+}
 
 #sidebar {
   padding: 5vh 0vh 0vh 0vh;
-  background-color: $--sidebar-background-color ;
+  background-color: $--sidebar-background-color;
   cursor: default;
   height: 100vh;
   left: 0;
@@ -171,7 +186,7 @@ section {
   z-index: 10000;
 }
 
-#sidebar>.inner {
+#sidebar > .inner {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -199,16 +214,16 @@ section {
   z-index: 1;
 }
 
-body.is-ie #sidebar>.inner {
+body.is-ie #sidebar > .inner {
   height: 100%;
 }
 
-#sidebar nav>ul {
+#sidebar nav > ul {
   list-style: none;
   padding: 0;
 }
 
-#sidebar nav>ul>li {
+#sidebar nav > ul > li {
   -moz-transform: translateY(0);
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -223,39 +238,39 @@ body.is-ie #sidebar>.inner {
   position: relative;
 }
 
-#sidebar nav>ul>li:first-child {
+#sidebar nav > ul > li:first-child {
   margin: 0;
 }
 
-#sidebar nav>ul>li:nth-child(1) {
+#sidebar nav > ul > li:nth-child(1) {
   -moz-transition-delay: 0.45s;
   -webkit-transition-delay: 0.45s;
   -ms-transition-delay: 0.45s;
   transition-delay: 0.45s;
 }
 
-#sidebar nav>ul>li:nth-child(2) {
+#sidebar nav > ul > li:nth-child(2) {
   -moz-transition-delay: 0.65s;
   -webkit-transition-delay: 0.65s;
   -ms-transition-delay: 0.65s;
   transition-delay: 0.65s;
 }
 
-#sidebar nav>ul>li:nth-child(3) {
+#sidebar nav > ul > li:nth-child(3) {
   -moz-transition-delay: 0.85s;
   -webkit-transition-delay: 0.85s;
   -ms-transition-delay: 0.85s;
   transition-delay: 0.85s;
 }
 
-#sidebar nav>ul>li:nth-child(4) {
+#sidebar nav > ul > li:nth-child(4) {
   -moz-transition-delay: 1.05s;
   -webkit-transition-delay: 1.05s;
   -ms-transition-delay: 1.05s;
   transition-delay: 1.05s;
 }
 
-#sidebar nav>ul>li:nth-child(5) {
+#sidebar nav > ul > li:nth-child(5) {
   -moz-transition-delay: 1.25s;
   -webkit-transition-delay: 1.25s;
   -ms-transition-delay: 1.25s;
@@ -279,7 +294,6 @@ body.is-ie #sidebar>.inner {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  
 }
 
 #sidebar nav a:hover {
@@ -287,18 +301,18 @@ body.is-ie #sidebar>.inner {
 }
 
 #sidebar nav a.active {
-    background: rgba(0,0,0,0.15);
-    box-shadow: inset 0 0 0.25em 0 rgba(0,0,0,0.125);
-    color: #fff;
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
+  color: #fff;
 }
-#sidebar nav a.active i{
-    color: $--element-pink;
+#sidebar nav a.active i {
+  color: $--element-pink;
 }
 #sidebar nav a.active:after {
   max-width: 100%;
 }
 
-body.is-loading #sidebar>.inner {
+body.is-loading #sidebar > .inner {
   opacity: 0;
 }
 
@@ -310,38 +324,51 @@ body.is-loading #sidebar nav ul li {
   opacity: 0;
 }
 
-
-
 @media screen and (max-width: 1280px) {
-
-  .iconfont{
+  .iconfont {
     display: none;
   }
   #sidebar nav a:before,
   #sidebar nav a:after {
-  border-radius: 0.2em;
-  bottom: 0;
-  content: '';
-  height: 0.2em;
-  position: absolute;
-  right: 0;
-  width: 100%;
+    border-radius: 0.2em;
+    bottom: 0;
+    content: "";
+    height: 0.2em;
+    position: absolute;
+    right: 0;
+    width: 100%;
   }
 
   #sidebar nav a:before {
-     background: #41484c;
+    background: #41484c;
   }
 
   #sidebar nav a:after {
-  background-image: -moz-linear-gradient(to right, $--element-blue, $--element-green);
-  background-image: -webkit-linear-gradient(to right, $--element-blue, $--element-green);
-  background-image: -ms-linear-gradient(to right, $--element-blue, $--element-green);
-  background-image: linear-gradient(to right, $--element-blue, $--element-green);
-  -moz-transition: max-width 0.2s ease;
-  -webkit-transition: max-width 0.2s ease;
-  -ms-transition: max-width 0.2s ease;
-  transition: max-width 0.2s ease;
-  max-width: 0;
+    background-image: -moz-linear-gradient(
+      to right,
+      $--element-blue,
+      $--element-green
+    );
+    background-image: -webkit-linear-gradient(
+      to right,
+      $--element-blue,
+      $--element-green
+    );
+    background-image: -ms-linear-gradient(
+      to right,
+      $--element-blue,
+      $--element-green
+    );
+    background-image: linear-gradient(
+      to right,
+      $--element-blue,
+      $--element-green
+    );
+    -moz-transition: max-width 0.2s ease;
+    -webkit-transition: max-width 0.2s ease;
+    -ms-transition: max-width 0.2s ease;
+    transition: max-width 0.2s ease;
+    max-width: 0;
   }
   #contribute {
     background-color: $--element-pink;
@@ -363,7 +390,7 @@ body.is-loading #sidebar nav ul li {
     height: 100%;
     transition: all 0.2s;
     border-radius: 5px;
-    content: '';
+    content: "";
     background-color: rgba(255, 255, 255, 0.2);
     bottom: 0px;
     display: none;
@@ -372,7 +399,6 @@ body.is-loading #sidebar nav ul li {
   #contribute:hover {
     right: 10px;
     bottom: -10px;
-
   }
   #contribute:hover::after {
     display: block;
@@ -392,11 +418,11 @@ body.is-loading #sidebar nav ul li {
     border-radius: 300px;
     width: 3.3em;
     height: 3.3em;
-    margin: .1em;
+    margin: 0.1em;
     position: relative;
     overflow: hidden;
     background: #88acdb;
-    -webkit-transition: all .2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
     -webkit-box-align: center;
@@ -417,7 +443,7 @@ body.is-loading #sidebar nav ul li {
     top: 0;
     width: 100%;
   }
-  #sidebar>.inner {
+  #sidebar > .inner {
     -moz-flex-direction: row;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -463,9 +489,8 @@ body.is-loading #sidebar nav ul li {
   }
 }
 
-@media screen and (max-width:768px) {
-
-  .iconfont{
+@media screen and (max-width: 768px) {
+  .iconfont {
     display: none;
   }
   #contribute {
@@ -491,11 +516,11 @@ body.is-loading #sidebar nav ul li {
     border-radius: 300px;
     width: 3.3em;
     height: 3.3em;
-    margin: .1em;
+    margin: 0.1em;
     position: relative;
     overflow: hidden;
     background: #88acdb;
-    -webkit-transition: all .2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
@@ -503,12 +528,11 @@ body.is-loading #sidebar nav ul li {
     text-align: center;
     float: right;
     right: 100px;
-     z-index: 3;
+    z-index: 3;
   }
 }
 
 @media screen and (max-width: 736px) {
-
   #sidebar {
     display: none;
   }

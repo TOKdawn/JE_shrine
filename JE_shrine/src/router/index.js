@@ -2,10 +2,11 @@ import App from '../App.vue'
 export default [{
     path: '/',
     component: App,
+    redirect: '/home',
     children: [{
-            path: '',
+            path: '/home',
             component: r => require.ensure([], () => r(require('../components/home/home.vue')), 'home'),
-            redirect: '/step',
+            redirect: '/home/step',
             children: [{
                 path: 'bd',
                 component: r => require.ensure([], () => r(require('../components/home/Tspectrum/BD.vue')), 'bd')

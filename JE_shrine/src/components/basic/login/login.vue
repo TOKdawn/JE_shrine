@@ -44,18 +44,21 @@ import store from '@/vuex/index.js'
         },
         methods: {
             handleSubmit(name) {
-                this.$axios.post('/user/login',{
-                    loginEmail: this.formInline.user,
-                    loginPsd: this.formInline.password
+                let _this = this;
+                this.$axios.post('/api/login',{
+                    username: this.formInline.user,
+                    password: this.formInline.password
                 }
-
                 ).then(function (response){
-                    console.log(response.msg)
+                    console.log(response.data)
+                    if(response.data.code == 0){
                     var userData={
                         'role':10,
-                        'name':response.name
+                        'name':response.data.userName
                     }
                     store.commit('login',userData)
+                        _this.$router.push('/home')
+                    }
                 }).catch(function(error){
                     console.log("请求失败")
                 })

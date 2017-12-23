@@ -15,7 +15,7 @@ import 'sass/element-variables.sass'
 import 'fonts/iconfont.css'
 import store from './vuex/'
 Vue.config.productionTip = false
-axios.defaults.baseURL = 'http://rap2api.taobao.org/app/mock/1162/'
+    // axios.defaults.baseURL = 'http://rap2api.taobao.org/app/mock/1162/'
 Vue.prototype.$axios = axios
 Vue.use(VueValidator)
 Vue.use(Vuex)

@@ -83,10 +83,8 @@ export default {
     },
   
   created() {
-     
-
         let _this = this;
-        this.$axios.get('/GET/donationSeller/').then(
+        this.$axios.get('http://rap2api.taobao.org/app/mock/1162/GET//donationSeller/').then(
             function (response) {
                 console.log(this);
                 console.log("请求捐赠成功",response.data)
