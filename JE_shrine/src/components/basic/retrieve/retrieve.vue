@@ -8,8 +8,8 @@
    <el-main> 
     <row> 
      <i-col span="16"> 
-      <card v-for="tiem in showData.data" :key="tiem.id" class="card" > 
-          <div @click="searchScore(tiem.id)">
+      <card v-for="tiem in showData.data" :key="tiem._id" class="card" > 
+          <div @click="searchScore(tiem._id)">
        <row> 
         <i-col span="7"> 
          <p class="cadImg"> <img :src="tiem.cover" /></p> 
@@ -22,13 +22,13 @@
           </el-tag></p> 
          <el-row type="flex" class="row-bg" justify="space-around" id="cardInfo"> 
           <el-col :span="3">
-           <icon type="eye"></icon>{{tiem.views}}
+           <icon type="eye"></icon>24
           </el-col> 
-          <el-col :span="12">
+          <el-col :span="8">
            <icon type="ios-person"></icon>{{tiem.userId}}
           </el-col> 
-          <el-col :span="3">
-           ???
+          <el-col :span="12">
+           {{tiem.updateAt}}
           </el-col> 
          </el-row> 
         </i-col> 
@@ -55,95 +55,21 @@ export default {
     search  
   },
   methods: {
-    getdata() {
-      return {
-        total: 1,
-        data: [
-          {
-            id: "591111111111111119a21d1e8d861c",
-            title: "旅の途中",
-            alias: ["人在旅途"],
-            album: "旅の途中",
-            author: "小峰公子",
-            composer: "吉良知彦",
-            singer: "清浦夏实",
-            content: "(6)(#6)1(#6)1(6)(5)(4)",
-            cover: "http://7xs2gj.com1.z0.glb.clouddn.com/ldtz.jpg-t",
-            tags: ["狼与香辛料", "狼と香辛料"],
-            references: [
-              {
-                name: "FREEDOM54",
-                url:
-                  "http://tieba.baidu.com/home/main?un=FREEDOM54&ie=utf-8&fr=pb"
-              }
-            ],
-            createDt: 1509326787,
-            updateDt: 1509326787,
-            userId: "59f48847e549a20f73d009e9",
-            status: 2,
-            views: 10
-          },
-           {
-            id: "59f123123123e8d861c",
-            title: "旅の途中",
-            alias: ["人在旅途"],
-            album: "旅の途中",
-            author: "小峰公子",
-            composer: "吉良知彦",
-            singer: "清浦夏实",
-            content: "(6)(#6)1(#6)1(6)(5)(4)",
-            cover: "http://7xs2gj.com1.z0.glb.clouddn.com/ldtz.jpg-t",
-            tags: ["狼与香辛料", "狼と香辛料"],
-            references: [
-              {
-                name: "FREEDOM54",
-                url:
-                  "http://tieba.baidu.com/home/main?un=FREEDOM54&ie=utf-8&fr=pb"
-              }
-            ],
-            createDt: 1509326787,
-            updateDt: 1509326787,
-            userId: "59f48847e549a20f73d009e9",
-            status: 0,
-            views: 8
-          },
-           {
-            id: "59f33333333333333d1e8d861c",
-            title: "旅の途中",
-            alias: ["人在旅途"],
-            album: "旅の途中",
-            author: "小峰公子",
-            composer: "吉良知彦",
-            singer: "清浦夏实",
-            content: "(6)(#6)1(#6)1(6)(5)(4)",
-            cover: "http://7xs2gj.com1.z0.glb.clouddn.com/ldtz.jpg-t",
-            tags: ["狼与香辛料", "狼と香辛料"],
-            references: [
-              {
-                name: "FREEDOM54",
-                url:
-                  "http://tieba.baidu.com/home/main?un=FREEDOM54&ie=utf-8&fr=pb"
-              }
-            ],
-            createDt: 1509326787,
-            updateDt: 1509326787,
-            userId: "59f48847e549a20f73d009e9",
-            status: 0,
-            views: 2
-          },
-        ]
-      };
-    },
+   
      searchScore(id){
         //  console.log("ssss")
             console.log(id)
-           
             this.$router.push({name: 'score', params: { scorename:id}})
         }
   },
   created() {
-      console.log(this.$route.params.keyword)
-      this.showData = this.getdata();
+      console.log('/api/suggest?term='+this.$route.params.keyword)
+      let _this = this;
+      this.$axios.get('/api/suggest?term='+this.$route.params.keyword)
+      .then((res)=>{
+        _this.showData = res.data
+      })
+     
       
   },
  

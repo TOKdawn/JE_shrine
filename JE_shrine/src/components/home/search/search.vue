@@ -7,6 +7,7 @@
                                          placeholder="请输入曲谱名或标签"
                                          @select="handleSelect"
                                          style="width:100%"
+                                         @keyup.enter.native="searchKeyword"
                                          ></el-autocomplete>
                      </el-col>
                     <el-col :span="2"> <el-button type="primary" icon="el-icon-search" @click = "searchKeyword">搜索</el-button></el-col>
@@ -26,13 +27,24 @@ export default {
                     "value": '我们的战场',
                     type: '1'
                 },{
-                    "value": '东方',
+                    "value": '进击的巨人op',
                     type: '2'
                 },{
-                    "value": '黄油飞',
+                    "value": '进击的巨人ed',
                     type: '1'
                 },{
                     "value": '残酷天使纲领',
+                    type: '1'
+                },{
+                    "value": '未闻花名op',
+                    type: '1'
+                },
+                {
+                    "value": '未闻花名ed',
+                    type: '1'
+                },
+                {
+                    "value": '未闻花名第二季',
                     type: '1'
                 }
             ]
@@ -46,6 +58,7 @@ export default {
         },
        
       querySearchAsync(queryString, cb) { // cd是回调函数
+      
         var restaurants = this.restaurants;
         var results = queryString ? restaurants.filter(this.createStateFilter(queryString)) : restaurants;
         clearTimeout(this.timeout);
@@ -59,7 +72,6 @@ export default {
         };
       },
       handleSelect(item) {
-        
         this.$router.push({name: 'retrieve', params: { keyword:item.value}})
       },
     },
