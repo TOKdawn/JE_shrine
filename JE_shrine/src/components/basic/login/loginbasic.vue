@@ -1,6 +1,8 @@
 <template>
     <div>
+     
       <div id="lgmainBody">
+         
         <span class="logo">JE</span>
         <div id="lgtable">
         <Tabs value="login"  type="line" id="yexy"  @on-click="clickTab">
@@ -8,12 +10,16 @@
         <TabPane label="注册" name="regist" ></TabPane>
         </Tabs>
         </div>
+    
       <router-view></router-view>
+
       </div>
     </div>
 </template>
 <script >
     /* eslint-disable no-new */
+
+    import scrollbg from 'components/home/scrollbg/scrollbg.vue'
   export default {
         date() {
           return {
@@ -30,7 +36,9 @@
                 break
             }
           }
-        }
+        },components:{
+            scrollbg
+            }
   }
 </script>
 <style lang="scss">

@@ -59,7 +59,8 @@ export default {
         };
       },
       handleSelect(item) {
-        console.log(item);
+        
+        this.$router.push({name: 'retrieve', params: { keyword:item.value}})
       },
     },
     created () {

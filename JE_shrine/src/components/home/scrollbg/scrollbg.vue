@@ -44,6 +44,7 @@ $--gradient-X: #e1f5fe;
       // background: linear-gradient(to bottom, #252525 0%, #386B76 100%);
       background: linear-gradient(to bottom, $--gradient-X 0%, $--gradient-Y 100%);
       background-attachment: fixed;
+      overflow: hidden;
 }
 
 @keyframes square {
