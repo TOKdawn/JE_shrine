@@ -208,5 +208,60 @@ router.get('/suggest', (req, res) => {
     })
 })
 
+// 上传歌曲
+router.post('/music/release', (req, res) => {
+    const { title, author, singer, content, tags } = req.body
+
+    if (!req.session.isLogin) {
+        res.send({
+            code: -1,
+            msg: '未登录'
+        })
+    } else {
+        UserDataModel.findOne({ username: req.session.userInfo.userName }, (err, userResult) => {
+            if (err) {
+                console.log(err)
+                res.send({
+                    status: false,
+                    msg: '查询失败'
+                })
+            }
+            if (userResult === null) {
+                res.send({
+                    status: false,
+                    msg: '无数据'
+                })
+            } else {
+                let _musicData = new MusicDataModel({
+                    from: userResult._id,
+                    title: title,
+                    author: author,
+                    singer: singer,
+                    content: content,
+                    tags: tags
+                });
+
+                _musicData.save((err, results) => {
+                    if (err) {
+                        console.log(err)
+                        res.send({
+                            code: -1,
+                            msg: 'Something error!'
+                        })
+                    }
+                    res.send({
+                        code: 0,
+                        msg: '录入成功'
+                    })
+                })
+
+
+            }
+        })
+    }
+
+})
+
+
 
 module.exports = router
