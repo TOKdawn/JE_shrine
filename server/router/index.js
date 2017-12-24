@@ -165,6 +165,7 @@ router.get('/music/:musicid', (req, res) => {
                 } else {
                     res.send({
                         id: musicResult._id,
+                        username: userResult.username,
                         title: musicResult.title,
                         author: musicResult.author,
                         singer: musicResult.singer,
