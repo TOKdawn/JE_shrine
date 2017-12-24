@@ -24,6 +24,7 @@ db.once("open", function() {
     console.log("------ 数据库连接成功！------")
 })
 
+app.use(express.static(__dirname + './../JE_shrine/dist'))
 
 app.use(bodyParser.json())
 app.use(cookieParser())
@@ -41,6 +42,7 @@ app.use(session({
         touchAfter: 30 * 60
     })
 }));
+
 
 
 app.use('/api', api);
@@ -64,7 +66,7 @@ app.all('*', function(req, res, next) {
 
 
 // 路由设置
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3800');
 app.set('port', port);
 
 /**
