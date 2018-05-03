@@ -5,9 +5,16 @@
   <a href='https://github.com/TOKdawn/JE_shrine/blob/master/LICENSE'><img src='https://img.shields.io/github/license/mashape/apistatus.svg' alt="License" /></a>
 </p>
 
+#现在是鸽了的状态Orz
+
+目前可公布的信息: 
+
+
 自由神社前端--[http://www.moeje.org/](http://www.moeje.org/)
 
 后端部分--[https://github.com/blackbbc/JE-Shrine-Server](https://github.com/blackbbc/JE-Shrine-Server)
+
+
 
 ## 技术栈
 
