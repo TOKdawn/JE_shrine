@@ -7,7 +7,7 @@
 
 #现在是鸽了的状态Orz
 
-目前可公布的信息: 
+目前可公布的信息: [DEMO]( https://tokdawn.github.io/JE_shrine/)
 
 
 自由神社前端--[http://www.moeje.org/](http://www.moeje.org/)
